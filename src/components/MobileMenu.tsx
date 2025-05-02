@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { DropdownMenuCheckboxItemProps } from "@radix-ui/react-dropdown-menu"
 import Link from 'next/link';
 import { Button } from "@/components/ui/button"
 import {
@@ -13,12 +12,16 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-type Checked = DropdownMenuCheckboxItemProps["checked"]
+interface NavLink {
+    label: string;
+    href: string;
+}
+
+interface HeaderProps {
+    links: NavLink[];
+}
 
 export function MobileMenu({ links }: HeaderProps) {
-    const [showStatusBar, setShowStatusBar] = React.useState<Checked>(true)
-    const [showActivityBar, setShowActivityBar] = React.useState<Checked>(false)
-    const [showPanel, setShowPanel] = React.useState<Checked>(false)
 
     return (
         <nav className="block md:hidden">
@@ -32,7 +35,7 @@ export function MobileMenu({ links }: HeaderProps) {
                     {links.map((e) => {
                         return (
 
-                            <DropdownMenuCheckboxItem>
+                            <DropdownMenuCheckboxItem key={e.label}>
                                 <Link href={e.href}>{e.label}</Link>
                             </DropdownMenuCheckboxItem>
                         )

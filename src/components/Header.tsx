@@ -4,6 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MobileMenu } from './MobileMenu';
 
+interface NavLink {
+    label: string;
+    href: string;
+}
+
+interface HeaderProps {
+    links: NavLink[];
+}
+
 export function Header({ links }: HeaderProps) {
     return (
         <header className='flex justify-between py-6 items-center px-6 md:px-32'>

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'shareable-card-preview.jpg',
+        url: '/shareable-card-preview.jpg',
         alt: 'Berbagi Bites Jogja',
       },
     ],
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description:
       'Berbagi Bites Jogja (BBJ) adalah Gerakan food rescue pertama di Jogja. Bergerak mengatasi Food Waste melalui Food Rescue dan Food Bank di wilayah Yogyakarta',
     images: [
-      'shareable-card-preview.jpg',
+      '/shareable-card-preview.jpg',
     ],
   },
 };
@@ -42,8 +42,7 @@ const guestLinks = [
   { label: 'Kontak', href: '#kontak' },
 ];
 
-
-export default function HomeLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
