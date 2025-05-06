@@ -15,7 +15,7 @@ interface HeaderProps {
 
 export function Header({ links }: HeaderProps) {
     return (
-        <header className='flex justify-between py-6 items-center px-6 md:px-32'>
+        <header className='flex justify-between py-3 md:py-6 items-center px-6 md:px-32'>
             <Link href="/" className='flex items-center gap-x-2'>
                 <Image src="/plain-logo-blue.png" alt="bbj-logo" width='40' height='40' />
                 <span className='text-navy font-bold text-xl md:text-2xl'>Berbagi Bites Jogja</span>

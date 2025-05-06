@@ -48,13 +48,13 @@ export default function Home() {
 
       <section className="-mx-2 md:-mx-32 bg-cover bg-no-repeat bg-[url('/jumbotron-image.png')] bg-gray-700 bg-blend-soft-light h-screen md:h-max">
         <div className="px-4 mx-auto max-w-screen-xl py-24 lg:py-42">
-          <h1 className="text-white font-bold text-4xl text-6xl w-full md:w-3/4">Bersama Kurangi <span className="text-navy">Limbah Makanan</span> di Jogja</h1>
-          <p className="text-white w-full md:w-1/2 mt-6 font-medium text-xl leading-10">Berbagi Bites Jogja menyelamatkan makanan berlebih dan mendistribusikannya kepada mereka yang membutuhkan untuk menciptakan Yogyakarta yang lebih berkelanjutan dan peduli.</p>
+          <h1 className="text-white font-bold text-4xl md:text-6xl w-full md:w-3/4">Bersama Kurangi <span className="text-navy">Limbah Makanan</span> di Jogja</h1>
+          <p className="text-white w-full md:w-1/2 mt-6 font-medium text-lg md:text-xl leading-6 md:leading-10">Berbagi Bites Jogja menyelamatkan makanan berlebih dan mendistribusikannya kepada mereka yang membutuhkan untuk menciptakan Yogyakarta yang lebih berkelanjutan dan peduli.</p>
           <nav className='flex gap-x-4 mt-6'>
-            <Link href='/' className='bg-navy text-white font-medium px-6 py-2 rounded-md shadow-md'>
+            <Link href='/' className='bg-navy text-sm md:text-md text-white font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
               Donasi Sekarang
             </Link>
-            <Link href='/' className='bg-white text-navy font-medium px-6 py-2 rounded-md shadow-md'>
+            <Link href='/' className='bg-white text-sm md:text-md text-navy font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
               Pelajari Program Kami
             </Link>
 
@@ -66,8 +66,8 @@ export default function Home() {
         <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg'>Setiap angka yang tercatat bukan sekadar statistik, melainkan cerminan nyata dari perubahan yang kita upayakan bersama. Di balik setiap angka, terdapat langkah konkret, kerja keras, dan komitmen kolektif untuk membangun sebuah kota yang lebih inklusif, berdaya, dan berkelanjutan untuk semua warganya.</p>
         <div>
-          <div className='flex flex-col md:flex-row justify-between my-12 gap-y-12 md:gap-x-12 px-12 md:px-1'>
-            <div className='bg-navy-light rounded-md flex w-full flex-col gap-y-4 py-18'  >
+          <div className='flex flex-col md:flex-row justify-between my-12 gap-y-12 md:gap-x-12 px-4 md:px-1'>
+            <div className='bg-navy-light rounded-md flex w-full flex-col gap-y-4 py-12 md:py-18'  >
               <div className='bg-white m-auto w-max p-6 shadow-md rounded-full'>
                 <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 6.5625C13.4844 6.5625 13.0625 6.14062 13.0625 5.625V4.6875C13.0625 2.09766 15.1602 0 17.75 0H18.6875C19.2031 0 19.625 0.421875 19.625 0.9375V1.875C19.625 4.46484 17.5273 6.5625 14.9375 6.5625H14ZM0.875 16.875C0.875 12.4043 2.9668 7.5 7.4375 7.5C9.03711 7.5 10.9355 8.10352 12.2832 8.63086C13.3848 9.05859 14.6211 9.05859 15.7227 8.63086C17.0645 8.10938 18.9688 7.5 20.5684 7.5C25.0391 7.5 27.1309 12.4043 27.1309 16.875C27.1309 24.375 22.4434 30 17.7559 30C16.7891 30 15.5234 29.6133 14.7383 29.3379C14.2637 29.1738 13.748 29.1738 13.2734 29.3379C12.4883 29.6133 11.2227 30 10.2559 30C5.5625 30 0.875 24.375 0.875 16.875Z" fill="#009CA6" />
@@ -80,7 +80,7 @@ export default function Home() {
               <div className='bg-slate-400 h-0.5 w-10 m-auto'></div>
               <p className='text-slate-500 text-sm'>Sejak 2024</p>
             </div>
-            <div className='bg-navy-light rounded-md flex w-full flex-col gap-y-4 py-18'  >
+            <div className='bg-navy-light rounded-md flex w-full flex-col gap-y-4 py-12 md:py-18'  >
               <div className='bg-white m-auto w-max p-6 shadow-md rounded-full'>
                 <svg width="28" height="30" viewBox="0 0 28 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M25.25 0C24.3125 0 17.75 1.875 17.75 10.3125V16.875C17.75 18.9434 19.4316 20.625 21.5 20.625H23.375V28.125C23.375 29.1621 24.2129 30 25.25 30C26.2871 30 27.125 29.1621 27.125 28.125V20.625V14.0625V1.875C27.125 0.837891 26.2871 0 25.25 0ZM4.625 0.9375C4.625 0.457031 4.26758 0.0585938 3.78711 0.00585938C3.30664 -0.046875 2.87891 0.269531 2.77344 0.732422L0.998047 8.71875C0.916016 9.08789 0.875 9.46289 0.875 9.83789C0.875 12.5273 2.93164 14.7363 5.5625 14.9766V28.125C5.5625 29.1621 6.40039 30 7.4375 30C8.47461 30 9.3125 29.1621 9.3125 28.125V14.9766C11.9434 14.7363 14 12.5273 14 9.83789C14 9.46289 13.959 9.08789 13.877 8.71875L12.1016 0.732422C11.9961 0.263672 11.5566 -0.046875 11.082 0.00585938C10.6074 0.0585938 10.25 0.457031 10.25 0.9375V8.80078C10.25 9.11719 9.99219 9.375 9.67578 9.375C9.37695 9.375 9.13086 9.14648 9.10156 8.84766L8.36914 0.855469C8.32812 0.369141 7.92383 0 7.4375 0C6.95117 0 6.54688 0.369141 6.50586 0.855469L5.7793 8.84766C5.75 9.14648 5.50391 9.375 5.20508 9.375C4.88867 9.375 4.63086 9.11719 4.63086 8.80078V0.9375H4.625ZM7.45508 9.84375H7.4375H7.41992L7.4375 9.80273L7.45508 9.84375Z" fill="#009CA6" />
@@ -91,7 +91,7 @@ export default function Home() {
               <div className='bg-slate-400 h-0.5 w-10 m-auto'></div>
               <p className='text-slate-500 text-sm'>Dan Terus Bertambah</p>
             </div>
-            <div className='bg-navy-light rounded-md flex w-full flex-col gap-y-4 py-18'  >
+            <div className='bg-navy-light rounded-md flex w-full flex-col gap-y-4 py-12 md:py-18'  >
               <div className='bg-white m-auto w-max p-6 shadow-md rounded-full'>
                 <svg width="38" height="38" viewBox="0 0 38 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.1992 1.99219L13.5273 6.58594C12.584 7.34766 12.4023 8.71875 13.1172 9.69727C13.873 10.7402 15.3438 10.9453 16.3574 10.1543L22.1758 5.63086C22.5859 5.31445 23.1719 5.38477 23.4941 5.79492C23.8164 6.20508 23.7402 6.79102 23.3301 7.11328L22.1055 8.0625L30.25 15.5625V4.5H30.209L29.9805 4.35352L25.7266 1.62891C24.8301 1.05469 23.7812 0.75 22.7148 0.75C21.4375 0.75 20.1953 1.18945 19.1992 1.99219ZM20.5352 9.28125L17.5059 11.6367C15.6602 13.0781 12.9824 12.7031 11.5996 10.8047C10.2988 9.01758 10.627 6.52148 12.3438 5.13281L17.2188 1.18945C16.5391 0.902344 15.8066 0.755859 15.0625 0.755859C13.9609 0.75 12.8887 1.07813 11.9688 1.6875L7.75 4.5V17.625H9.40234L14.7578 22.5117C15.9062 23.5605 17.6816 23.4785 18.7305 22.3301C19.0527 21.9727 19.2695 21.5566 19.3809 21.123L20.377 22.0371C21.5195 23.0859 23.3008 23.0098 24.3496 21.8672C24.6133 21.5801 24.8066 21.2461 24.9297 20.9004C26.0664 21.6621 27.6133 21.5039 28.5684 20.4609C29.6172 19.3184 29.541 17.5371 28.3984 16.4883L20.5352 9.28125ZM1.1875 4.5C0.671875 4.5 0.25 4.92188 0.25 5.4375V17.625C0.25 18.6621 1.08789 19.5 2.125 19.5H4C5.03711 19.5 5.875 18.6621 5.875 17.625V4.5H1.1875ZM3.0625 15.75C3.31114 15.75 3.5496 15.8488 3.72541 16.0246C3.90123 16.2004 4 16.4389 4 16.6875C4 16.9361 3.90123 17.1746 3.72541 17.3504C3.5496 17.5262 3.31114 17.625 3.0625 17.625C2.81386 17.625 2.5754 17.5262 2.39959 17.3504C2.22377 17.1746 2.125 16.9361 2.125 16.6875C2.125 16.4389 2.22377 16.2004 2.39959 16.0246C2.5754 15.8488 2.81386 15.75 3.0625 15.75ZM32.125 4.5V17.625C32.125 18.6621 32.9629 19.5 34 19.5H35.875C36.9121 19.5 37.75 18.6621 37.75 17.625V5.4375C37.75 4.92188 37.3281 4.5 36.8125 4.5H32.125ZM34 16.6875C34 16.4389 34.0988 16.2004 34.2746 16.0246C34.4504 15.8488 34.6889 15.75 34.9375 15.75C35.1861 15.75 35.4246 15.8488 35.6004 16.0246C35.7762 16.2004 35.875 16.4389 35.875 16.6875C35.875 16.9361 35.7762 17.1746 35.6004 17.3504C35.4246 17.5262 35.1861 17.625 34.9375 17.625C34.6889 17.625 34.4504 17.5262 34.2746 17.3504C34.0988 17.1746 34 16.9361 34 16.6875Z" fill="#009CA6" />
@@ -110,7 +110,7 @@ export default function Home() {
         <h1 className='text-navy text-4xl font-bold'>Tentang Kami</h1>
         <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg'>Berbagi Bites Jogja adalah inisiatif nirlaba yang berfokus pada pengurangan limbah makanan melalui penyelamatan dan redistribusi makanan di seluruh Yogyakarta.</p>
-        <div className='flex justify-between my-12 gap-x-6 gap-y-6 px-12 md:px-48 flex-col md:flex-row'>
+        <div className='flex justify-between my-12 gap-x-6 gap-y-6 px-6 md:px-48 flex-col md:flex-row'>
           <div className='bg-white shadow-xl rounded-md py-8 px-3 w-full md:w-1/5 flex flex-col gap-y-2'>
             <div className='bg-navy-light m-auto w-max p-6 shadow-md rounded-full'>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -210,7 +210,7 @@ export default function Home() {
         <h3 className='bg-navy-light text-navy w-max text-center m-auto p-3 rounded-full text-md font-medium'>Program Unggulan</h3>
         <h2 className='text-navy font-bold text-4xl text-center my-6'>Program Kami</h2>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg text-center'>Kami bekerja dengan penuh dedikasi melalui berbagai program inovatif yang dirancang untuk mengurangi limbah makanan sekaligus memberdayakan komunitas di Yogyakarta. Setiap inisiatif yang kami jalankan berakar pada semangat kolaborasi, keberlanjutan, dan keadilan sosial.</p>
-        <div className='flex flex-col md:flex-row justify-between gap-x-12 gap-y-12 my-12 px-12 md:px-0'>
+        <div className='flex flex-col md:flex-row justify-between gap-x-12 gap-y-12 my-12 px-4 md:px-0'>
           {ourPrograms.map((e, i) => {
             return (
               <ProgramCard
@@ -230,7 +230,7 @@ export default function Home() {
       <section className='-mx-2 md:-mx-32 bg-navy-light py-12 px-4 md:px-32'>
         <h1 className='text-gray-400 font-bold text-4xl text-center my-6'>Dampak Kami</h1>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg text-center'>Di Berbagi Bites Jogja, kami meyakini bahwa perubahan besar dimulai dari tindakan nyata yang konsisten. Melalui pendekatan kolaboratif dan program berbasis komunitas, kami telah membangun dampak yang berkelanjutan—mengurangi limbah makanan, memperkuat ketahanan pangan, dan mendorong adopsi praktik ramah lingkungan.</p>
-        <div className='flex flex-col md:flex-row justify-between gap-x-6 gap-y-6 my-12 px-12 md:px-0'>
+        <div className='flex flex-col md:flex-row justify-between gap-x-6 gap-y-6 my-12 px-4 md:px-0'>
           <div className='bg-white shadow-xl rounded-xl p-6 flex flex-row gap-x-4 justify-between'>
             <div className='bg-navy-light rounded-full p-5 h-max hidden md:block'>
               <Image width={40} src={IconDaun} alt='logo-icon' />
@@ -240,21 +240,21 @@ export default function Home() {
               <p className='font-medium text-gray-400 my-6 text-lg'>Dengan menyelamatkan makanan dari tempat pembuangan sampah, kami telah mencapai dampak positif yang signifikan:</p>
               <div className='flex flex-col gap-y-6'>
                 <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
-                  <Image width={40} src={IconPetir} alt='logo-icon' className='mt-3' />
+                  <Image width={40} src={IconPetir} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Pengurangan emisi gas rumah kaca</h4>
                     <p className='text-gray-400 text-lg'>yang dihasilkan dari pembusukan makanan, mendukung upaya mitigasi perubahan iklim di tingkat lokal.</p>
                   </div>
                 </div>
                 <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
-                  <Image width={40} src={IconAir} alt='logo-icon' className='mt-3' />
+                  <Image width={40} src={IconAir} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Penghematan jutaan liter air</h4>
                     <p className='text-gray-400 text-lg'>yang secara normal dibutuhkan dalam proses produksi, distribusi, dan penyimpanan pangan baru.</p>
                   </div>
                 </div>
                 <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
-                  <Image width={40} src={IconRecycle} alt='logo-icon' className='mt-3' />
+                  <Image width={40} src={IconRecycle} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Penyelamatan ribuan kilogram makanan</h4>
                     <p className='text-gray-400 text-lg'>dari berakhir di tempat pembuangan akhir, sehingga mengurangi tekanan terhadap kapasitas TPA di Yogyakarta.</p>
@@ -272,21 +272,21 @@ export default function Home() {
               <p className='font-medium text-gray-400 my-6 text-lg'>Program kami telah memberikan manfaat nyata bagi masyarakat melalui berbagai inisiatif yang berdampak baik pada lingkungan sosial:</p>
               <div className='flex flex-col gap-y-6'>
                 <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
-                  <Image width={50} src={IconSendok} alt='logo-icon' className='mt-3' />
+                  <Image width={50} src={IconSendok} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Memenuhi kebutuhan gizi ribuan individu</h4>
                     <p className='text-gray-400 text-lg'>dari berbagai latar belakang, terutama anak-anak, lansia, dan komunitas rentan yang terdampak ketidakpastian pangan.</p>
                   </div>
                 </div>
                 <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
-                  <Image width={50} src={IconBuilding} alt='logo-icon' className='mt-3' />
+                  <Image width={50} src={IconBuilding} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Mendukung 15 institusi sosial</h4>
                     <p className='text-gray-400 text-lg'>termasuk panti asuhan dan komunitas lansia, dengan distribusi pangan yang berkelanjutan dan tepat sasaran.</p>
                   </div>
                 </div>
                 <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
-                  <Image width={50} src={IconJabat} alt='logo-icon' className='mt-3' />
+                  <Image width={50} src={IconJabat} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Meningkatkan kesadaran masyarakat</h4>
                     <p className='text-gray-400 text-lg'>tentang pentingnya penyelamatan pangan dan keberlanjutan melalui berbagai program edukasi, workshop, dan kampanye publik.</p>
@@ -303,12 +303,12 @@ export default function Home() {
           <div className='bg-navy h-1 w-12 m-auto my-4'></div>
           <p>Dengarkan pengalaman dari berbagai pihak yang telah berkolaborasi dan merasakan dampak positif dari program Berbagi Bites Jogja.</p>
         </div>
-        <div className='flex flex-col md:flex-row gap-x-12 gap-y-12 justify-between px-12 md:px-0'>
+        <div className='flex flex-col md:flex-row gap-x-12 gap-y-6 justify-between px-4 md:px-0'>
           {[0, 1, 2].map((e, i) => {
             return (
-              <div key={i} className='bg-white rounded-xl p-12'>
+              <div key={i} className='bg-white rounded-xl p-6 md:p-12'>
                 <Image src={IconAir} alt='icon' />
-                <p className='my-12 text-gray-500'>&quot;Sebagai pemilik restoran, BBJ membantu kami mengelola kelebihan makanan dengan cara yang bermakna. Proses pengambilan yang teratur dan profesional membuat kami yakin makanan tersebut sampai ke tangan yang tepat.&quot;</p>
+                <p className='my-6 md:my-12 text-gray-500'>&quot;Sebagai pemilik restoran, BBJ membantu kami mengelola kelebihan makanan dengan cara yang bermakna. Proses pengambilan yang teratur dan profesional membuat kami yakin makanan tersebut sampai ke tangan yang tepat.&quot;</p>
                 <div className='flex flex-row gap-x-3'>
                   <Image src={IconAir} alt='icon-air' />
                   <div>
@@ -413,7 +413,7 @@ export default function Home() {
         <h1 className='font-bold text-4xl text-center'>Mitra Kami</h1>
         <p className='text-center my-6'>Kami berkolaborasi dengan berbagai mitra untuk mencapai misi kami</p>
       </section>
-      <section className='-mx-2 md:-mx-32 bg-gray-100 py-12 md:py-24 px-12 md:px-32'>
+      <section className='-mx-2 md:-mx-32 bg-gray-100 py-12 md:py-24 px-4 md:px-32'>
         <div className='flex flex-col md:flex-row gap-x-12 justify-between'>
           <div>
             <h1 className='font-bold text-4xl'>Hubungi Kami</h1>
@@ -437,7 +437,7 @@ export default function Home() {
 
           <div className='bg-white shadow-md rounded-md p-6 w-full md:w-1/2 mt-12 md:mt-0'>
             <h1 className='font-bold text-2xl'>Informasi Kontak</h1>
-            <div className='flex flex-col gap-y-6 mt-12'>
+            <div className='flex flex-col gap-y-6 mt-6 md:mt-12'>
               <div className='flex flex-row gap-x-3 items-center'>
                 <div className='bg-navy-light p-3 rounded-full'>
                   <Image src={IconAir} alt='icon-air' />
@@ -482,12 +482,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='-mx-2 md:-mx-32 bg-navy-light py-12 px-12 md:px-32'>
+      <section className='-mx-2 md:-mx-32 bg-navy-light py-12 px-6 md:px-32'>
         <h1 className='text-center text-3xl font-bold'>Berlangganan Newsletter Kami</h1>
         <p className='text-center text-gray-400 my-6'>Dapatkan update terbaru tentang program dan kegiatan kami langsung ke inbox anda</p>
-        <form action="" className='m-auto w-max'>
-          <input className='bg-white rounded-l-md p-3' type="text" placeholder='Alamat email anda' />
-          <button type='submit' className='bg-navy text-white p-3 rounded-r-md'>Berlanggananan</button>
+        <form action="" className='m-auto w-full md:w-max'>
+          <input className='bg-white rounded-md md:rounded-l-md p-3 w-full md:w-max' type="text" placeholder='Alamat email anda' />
+          <button type='submit' className='bg-navy mt-6 md:mt-0 text-white p-3 rounded-md md:rounded-r-md w-full md:w-max'>Berlanggananan</button>
         </form>
       </section>
     </>

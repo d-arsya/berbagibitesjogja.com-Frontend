@@ -18,7 +18,7 @@ export default function ProgramCard({ ...data }: ProgramAttribute) {
                     {data.flag}
                 </span>
             </div>
-            <div className='p-12'>
+            <div className='p-6 md:p-12'>
                 <div className='flex flex-row gap-x-3 items-center'>
                     <div className='bg-navy-light rounded-full p-3 w-max h-max'>
                         <Image src={data.icon} alt='Makan' />
