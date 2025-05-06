@@ -308,12 +308,7 @@ export default function Home() {
             return (
               <div key={i} className='bg-white rounded-xl p-12'>
                 <Image src={IconAir} alt='icon' />
-                <p className='my-12 text-gray-500'>"Sebagai pemilik restoran, BBJ membantu
-                  kami mengelola kelebihan makanan
-                  dengan cara yang bermakna. Proses
-                  pengambilan yang teratur dan profesional
-                  membuat kami yakin makanan tersebut
-                  sampai ke tangan yang tepat."</p>
+                <p className='my-12 text-gray-500'>&quot;Sebagai pemilik restoran, BBJ membantu kami mengelola kelebihan makanan dengan cara yang bermakna. Proses pengambilan yang teratur dan profesional membuat kami yakin makanan tersebut sampai ke tangan yang tepat.&quot;</p>
                 <div className='flex flex-row gap-x-3'>
                   <Image src={IconAir} alt='icon-air' />
                   <div>
