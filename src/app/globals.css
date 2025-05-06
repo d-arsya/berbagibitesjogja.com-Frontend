@@ -7,6 +7,7 @@
   /* ===CUSTOM VARIABEL=== */
   --color-navy: #009CA6;
   --color-navy-light: #E0F7FA;
+  --color-navy-medium: #009CA647;
   --color-tosca: #004C5A;
   --color-tosca-light: #0071798C;
   --color-background: var(--background);
@@ -121,7 +122,12 @@
     @apply border-border outline-ring/50;
   }
 
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
   body {
     @apply bg-background text-foreground;
+    scrollbar-width: 0;
   }
 }
