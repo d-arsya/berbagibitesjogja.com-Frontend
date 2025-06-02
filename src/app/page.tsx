@@ -11,31 +11,32 @@ import IconJabat from 'public/svg/hand-shake.svg'
 import IconGotong from 'public/svg/work-together.svg'
 import IconBuilding from 'public/svg/building.svg'
 import IconAir from 'public/svg/water.svg'
+import IconAjar from 'public/svg/teach-class.svg'
 import ProgramCard from '@/components/ProgramCard';
-import { Instagram, Linkedin, Music2 } from 'lucide-react';
+import { Instagram, Linkedin, Mail, MapPin, Music2, Phone } from 'lucide-react';
 
 const ourPrograms = [
   {
     image: GambarMakanan,
     icon: IconTangan,
     title: "Penyelamatan Makanan",
-    description: "Mengumpulkan kelebihan makanan berkualitas dari restoran, hotel, dan toko untuk mencegah pemborosan. Program ini telah menyelamatkan lebih dari 5.000 kg makanan.",
+    description: "Mengumpulkan kelebihan makanan berkualitas dari restoran, hotel, dan toko untuk mencegah pemborosan. Program ini telah menyelamatkan lebih dari 1330 kg makanan.",
     link: "/penyelamatan",
     flag: "Flagship Program",
   },
   {
     image: GambarMakanan,
-    icon: IconTangan,
+    icon: IconGotong,
     title: "Distribusi Makanan",
-    description: "Menyalurkan makanan yang diselamatkan ke panti asuhan, lansia, dan komunitas yang membutuhkan. Telah membantu lebih dari 10.000 penerima manfaat.",
+    description: "Menyalurkan makanan yang diselamatkan ke panti asuhan, lansia, dan komunitas yang membutuhkan. Telah membantu lebih dari 5000 penerima manfaat.",
     link: "/distribusi",
     flag: "High Impact",
   },
   {
     image: GambarMakanan,
-    icon: IconTangan,
+    icon: IconAjar,
     title: "Edukasi Masyarakat",
-    description: "Menyelenggarakan lokakarya dan kampanye untuk meningkatkan kesadaran tentang masalah limbah makanan. 50+ workshop telah dilaksanakan.",
+    description: "Menyelenggarakan lokakarya dan kampanye untuk meningkatkan kesadaran tentang masalah limbah makanan. 10+ workshop telah dilaksanakan.",
     link: "/edukasi",
     flag: "Community Program",
   },
@@ -51,10 +52,10 @@ export default function Home() {
           <h1 className="text-white font-bold text-4xl md:text-6xl w-full md:w-3/4">Bersama Kurangi <span className="text-navy">Limbah Makanan</span> di Jogja</h1>
           <p className="text-white w-full md:w-1/2 mt-6 font-medium text-lg md:text-xl leading-6 md:leading-10">Berbagi Bites Jogja menyelamatkan makanan berlebih dan mendistribusikannya kepada mereka yang membutuhkan untuk menciptakan Yogyakarta yang lebih berkelanjutan dan peduli.</p>
           <nav className='flex gap-x-4 mt-6'>
-            <Link href='/' className='bg-navy text-sm md:text-md text-white font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
+            <Link href='https://wa.me/628986950700' className='bg-navy text-sm md:text-md text-white font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
               Donasi Sekarang
             </Link>
-            <Link href='/' className='bg-white text-sm md:text-md text-navy font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
+            <Link href='https://wa.me/628986950700' className='bg-white text-sm md:text-md text-navy font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
               Pelajari Program Kami
             </Link>
 
@@ -75,7 +76,7 @@ export default function Home() {
 
               </div>
 
-              <h2 className='font-bold text-navy text-4xl'>5240+</h2>
+              <h2 className='font-bold text-navy text-4xl'>1330+</h2>
               <p className='font-medium'>Kg Makanan Diselamatkan</p>
               <div className='bg-slate-400 h-0.5 w-10 m-auto'></div>
               <p className='text-slate-500 text-sm'>Sejak 2024</p>
@@ -86,7 +87,7 @@ export default function Home() {
                   <path d="M25.25 0C24.3125 0 17.75 1.875 17.75 10.3125V16.875C17.75 18.9434 19.4316 20.625 21.5 20.625H23.375V28.125C23.375 29.1621 24.2129 30 25.25 30C26.2871 30 27.125 29.1621 27.125 28.125V20.625V14.0625V1.875C27.125 0.837891 26.2871 0 25.25 0ZM4.625 0.9375C4.625 0.457031 4.26758 0.0585938 3.78711 0.00585938C3.30664 -0.046875 2.87891 0.269531 2.77344 0.732422L0.998047 8.71875C0.916016 9.08789 0.875 9.46289 0.875 9.83789C0.875 12.5273 2.93164 14.7363 5.5625 14.9766V28.125C5.5625 29.1621 6.40039 30 7.4375 30C8.47461 30 9.3125 29.1621 9.3125 28.125V14.9766C11.9434 14.7363 14 12.5273 14 9.83789C14 9.46289 13.959 9.08789 13.877 8.71875L12.1016 0.732422C11.9961 0.263672 11.5566 -0.046875 11.082 0.00585938C10.6074 0.0585938 10.25 0.457031 10.25 0.9375V8.80078C10.25 9.11719 9.99219 9.375 9.67578 9.375C9.37695 9.375 9.13086 9.14648 9.10156 8.84766L8.36914 0.855469C8.32812 0.369141 7.92383 0 7.4375 0C6.95117 0 6.54688 0.369141 6.50586 0.855469L5.7793 8.84766C5.75 9.14648 5.50391 9.375 5.20508 9.375C4.88867 9.375 4.63086 9.11719 4.63086 8.80078V0.9375H4.625ZM7.45508 9.84375H7.4375H7.41992L7.4375 9.80273L7.45508 9.84375Z" fill="#009CA6" />
                 </svg>
               </div>
-              <h2 className='font-bold text-navy text-4xl'>12.600+</h2>
+              <h2 className='font-bold text-navy text-4xl'>5000+</h2>
               <p className='font-medium'>Porsi Dibagikan</p>
               <div className='bg-slate-400 h-0.5 w-10 m-auto'></div>
               <p className='text-slate-500 text-sm'>Dan Terus Bertambah</p>
@@ -98,7 +99,7 @@ export default function Home() {
                 </svg>
 
               </div>
-              <h2 className='font-bold text-navy text-4xl'>48+</h2>
+              <h2 className='font-bold text-navy text-4xl'>10+</h2>
               <p className='font-medium'>Mitra Donatur</p>
               <div className='bg-slate-400 h-0.5 w-10 m-auto'></div>
               <p className='text-slate-500 text-sm'>Bergabung Bersama Kami</p>
@@ -144,7 +145,7 @@ export default function Home() {
               </svg>
 
             </div>
-            <h2 className='font-semibold text-md'>15 Komunitas</h2>
+            <h2 className='font-semibold text-md'>10 Komunitas</h2>
             <div className='text-slate-500'>Terlayani setiap minggunya</div>
           </div>
           <div className='bg-white shadow-xl rounded-md py-8 px-3 w-full md:w-1/5 flex flex-col gap-y-2'>
@@ -207,7 +208,7 @@ export default function Home() {
         </div>
       </section>
       <section className='py-12'>
-        <h3 className='bg-navy-light text-navy w-max text-center m-auto p-3 rounded-full text-md font-medium'>Program Unggulan</h3>
+        <h3 id='program' className='bg-navy-light text-navy w-max text-center m-auto p-3 rounded-full text-md font-medium'>Program Unggulan</h3>
         <h2 className='text-navy font-bold text-4xl text-center my-6'>Program Kami</h2>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg text-center'>Kami bekerja dengan penuh dedikasi melalui berbagai program inovatif yang dirancang untuk mengurangi limbah makanan sekaligus memberdayakan komunitas di Yogyakarta. Setiap inisiatif yang kami jalankan berakar pada semangat kolaborasi, keberlanjutan, dan keadilan sosial.</p>
         <div className='flex flex-col md:flex-row justify-between gap-x-12 gap-y-12 my-12 px-4 md:px-0'>
@@ -227,7 +228,7 @@ export default function Home() {
 
         </div>
       </section>
-      <section className='-mx-2 md:-mx-32 bg-navy-light py-12 px-4 md:px-32'>
+      <section id='dampak' className='-mx-2 md:-mx-32 bg-navy-light py-12 px-4 md:px-32'>
         <h1 className='text-gray-400 font-bold text-4xl text-center my-6'>Dampak Kami</h1>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg text-center'>Di Berbagi Bites Jogja, kami meyakini bahwa perubahan besar dimulai dari tindakan nyata yang konsisten. Melalui pendekatan kolaboratif dan program berbasis komunitas, kami telah membangun dampak yang berkelanjutan—mengurangi limbah makanan, memperkuat ketahanan pangan, dan mendorong adopsi praktik ramah lingkungan.</p>
         <div className='flex flex-col md:flex-row justify-between gap-x-6 gap-y-6 my-12 px-4 md:px-0'>
@@ -281,7 +282,7 @@ export default function Home() {
                 <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
                   <Image width={50} src={IconBuilding} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
-                    <h4 className='text-xl font-bold text-navy'>Mendukung 15 institusi sosial</h4>
+                    <h4 className='text-xl font-bold text-navy'>Mendukung 10 institusi sosial</h4>
                     <p className='text-gray-400 text-lg'>termasuk panti asuhan dan komunitas lansia, dengan distribusi pangan yang berkelanjutan dan tepat sasaran.</p>
                   </div>
                 </div>
@@ -297,7 +298,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='-mx-2 md:-mx-32 bg-navy-medium py-12 px-4 md:px-32'>
+      {/* <section className='-mx-2 md:-mx-32 bg-navy-medium py-12 px-4 md:px-32'>
         <div className='bg-tosca-light rounded-4xl p-6 md:p-12 m-auto text-center text-white w-full md:w-1/2 my-12'>
           <h1 className='text-4xl font-bold'>Apa Kata Mereka</h1>
           <div className='bg-navy h-1 w-12 m-auto my-4'></div>
@@ -320,8 +321,8 @@ export default function Home() {
             )
           })}
         </div>
-      </section>
-      <section className='-mx-2 md:-mx-32 bg-navy py-12 px-6 md:px-32'>
+      </section> */}
+      <section id='gabung' className='-mx-2 md:-mx-32 bg-navy py-12 px-6 md:px-32'>
         <div className='bg-tosca-light rounded-4xl p-6 md:p-12'>
           <h1 className='text-white font-bold text-4xl text-center'>Bergabung Bersama Kami</h1>
           <p className='text-white text-center text-lg w-full md:w-1/2 m-auto mt-6'>Pilih peran Anda dalam perjalanan ini - melalui donasi, aksi langsung sebagai relawan, atau kolaborasi sebagai mitra penyelamat pangan </p>
@@ -353,7 +354,7 @@ export default function Home() {
                 <div className='w-full bg-gray-400 mt-2' style={{ height: '0.5px' }}></div>
               </div>
               <div className='p-6'>
-                <Link href={'/donasi'} className='bg-navy rounded-md block py-2 text-center w-full text-white font-bold'>Donasi Sekarang</Link>
+                <Link href={'https://wa.me/628986950700'} className='bg-navy rounded-md block py-2 text-center w-full text-white font-bold'>Donasi Sekarang</Link>
               </div>
             </div>
             <div className='rounded-2xl bg-white w-full md:w-1/3 overflow-hidden'>
@@ -378,7 +379,7 @@ export default function Home() {
                   </svg>Administrasi</p>
 
                 </div>
-                <Link href={'/gabung/relawan'} className='bg-navy rounded-md block py-2 text-center w-full text-white font-bold'>Daftar Relawan</Link>
+                <Link href={'https://wa.me/628986950700'} className='bg-navy rounded-md block py-2 text-center w-full text-white font-bold'>Daftar Relawan</Link>
               </div>
             </div>
             <div className='rounded-2xl bg-white w-full md:w-1/3 overflow-hidden'>
@@ -403,7 +404,7 @@ export default function Home() {
                   </svg>Pasar Tradisional</p>
 
                 </div>
-                <Link href={'/gabung/mitra'} className='bg-navy rounded-md block py-2 text-center w-full text-white font-bold'>Jadi Mitra</Link>
+                <Link href={'https://wa.me/628986950700'} className='bg-navy rounded-md block py-2 text-center w-full text-white font-bold'>Jadi Mitra</Link>
               </div>
             </div>
           </div>
@@ -413,7 +414,7 @@ export default function Home() {
         <h1 className='font-bold text-4xl text-center'>Mitra Kami</h1>
         <p className='text-center my-6'>Kami berkolaborasi dengan berbagai mitra untuk mencapai misi kami</p>
       </section>
-      <section className='-mx-2 md:-mx-32 bg-gray-100 py-12 md:py-24 px-4 md:px-32'>
+      <section id='kontak' className='-mx-2 md:-mx-32 bg-gray-100 py-12 md:py-24 px-4 md:px-32'>
         <div className='flex flex-col md:flex-row gap-x-12 justify-between'>
           <div>
             <h1 className='font-bold text-4xl'>Hubungi Kami</h1>
@@ -440,29 +441,29 @@ export default function Home() {
             <div className='flex flex-col gap-y-6 mt-6 md:mt-12'>
               <div className='flex flex-row gap-x-3 items-center'>
                 <div className='bg-navy-light p-3 rounded-full'>
-                  <Image src={IconAir} alt='icon-air' />
+                  <MapPin color='#009CA6' />
                 </div>
                 <span>
                   <h5 className='font-bold'>Alamat</h5>
-                  <p>Jl. Malioboro No. 123, Yogyakarta 55213</p>
+                  <Link href={'https://maps.app.goo.gl/SVBVQDueY8UdcXX79'}>Blk. A, Jl. Podocarpus II Bulaksumur, Sagan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</Link>
                 </span>
               </div>
               <div className='flex flex-row gap-x-3 items-center'>
                 <div className='bg-navy-light p-3 rounded-full'>
-                  <Image src={IconAir} alt='icon-air' />
+                  <Phone color='#009CA6' />
                 </div>
                 <span>
                   <h5 className='font-bold'>Telepon</h5>
-                  <p>Jl. Malioboro No. 123, Yogyakarta 55213</p>
+                  <Link href={'https://wa.me/628986950700'}>+62 898 695 0700</Link>
                 </span>
               </div>
               <div className='flex flex-row gap-x-3 items-center'>
                 <div className='bg-navy-light p-3 rounded-full'>
-                  <Image src={IconAir} alt='icon-air' />
+                  <Mail color='#009CA6' />
                 </div>
                 <span>
                   <h5 className='font-bold'>Email</h5>
-                  <p>Jl. Malioboro No. 123, Yogyakarta 55213</p>
+                  <Link href={'mailto:berbagibitesjogja@gmail.com'}>berbagibitesjogja@gmail.com</Link>
                 </span>
               </div>
 

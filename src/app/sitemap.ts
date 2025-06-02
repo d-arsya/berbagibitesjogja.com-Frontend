@@ -1,6 +1,32 @@
 import type { MetadataRoute } from 'next'
+interface Sitemap {
+    url: string;
+    lastModified: Date;
+    changeFrequency: 'weekly' | 'monthly';
+    priority: number;
+}
 
-export default function sitemap(): MetadataRoute.Sitemap {
+async function getNews(): Promise<Sitemap[]> {
+    const response = await fetch(
+        'https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_fields=slug,date'
+    );
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch posts');
+    }
+
+    const posts: { slug: string, date: Date }[] = await response.json();
+
+    return posts.map((post): Sitemap => ({
+        url: `https://berbagibitesjogja.com/news/${post.slug}`,
+        lastModified: post.date, // Bisa diganti kalau punya field date
+        changeFrequency: 'weekly',
+        priority: 0.9,
+    }));
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const newsLinks = await getNews()
     return [
         {
             url: 'https://berbagibitesjogja.com',
@@ -55,6 +81,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 0.9,
-        },
+        }, ...newsLinks
     ]
 }

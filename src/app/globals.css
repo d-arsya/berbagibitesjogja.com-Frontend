@@ -132,6 +132,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+
+}
 
 /* WordPress Content Styling for Next.js */
 .container {
