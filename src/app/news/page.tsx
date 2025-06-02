@@ -58,7 +58,7 @@ interface NewsItem {
 
 
 export default async function Page() {
-    const response = await fetch('https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_embed')
+    const response = await fetch('https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_embed', { next: { revalidate: 10 } })
     const rawNews = await response.json();
     const news = rawNews.map((post: WPPost): NewsItem => {
         const featured = post._embedded?.['wp:featuredmedia']?.[0];
