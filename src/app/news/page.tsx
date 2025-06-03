@@ -4,7 +4,6 @@ import NewsCard from "@/components/NewsCard";
 import IconTangan from 'public/svg/hand-love.svg'
 import IconJabat from 'public/svg/hand-shake.svg'
 import IconGotong from 'public/svg/work-together.svg'
-import { Metadata } from "next";
 
 interface PostAttribute {
     id: number;

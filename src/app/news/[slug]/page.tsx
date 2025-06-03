@@ -1,6 +1,6 @@
 import SidebarNews from "@/components/SidebarNews";
 import Link from "next/link";
-import type { Metadata, ResolvingMetadata } from 'next'
+import type { Metadata } from 'next'
 
 type Props = {
     params: Promise<{ slug: string }>
@@ -8,8 +8,7 @@ type Props = {
 }
 
 export async function generateMetadata(
-    { params, searchParams }: Props,
-    parent: ResolvingMetadata
+    { params }: Props
 ): Promise<Metadata> {
     const slug = (await params).slug
 
@@ -19,7 +18,6 @@ export async function generateMetadata(
     )
     const data = post[0];
     const yoast = data.yoast_head_json;
-    console.log(data);
 
     return {
         title: data.title.rendered,
