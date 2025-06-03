@@ -13,7 +13,7 @@ export async function generateMetadata(
     const slug = (await params).slug
 
     // fetch post information
-    const post = await fetch(`https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?slug=${slug}`).then((res) =>
+    const post = await fetch(`https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?slug=${slug}`, { next: { revalidate: 3600 } }).then((res) =>
         res.json()
     )
     const data = post[0];
