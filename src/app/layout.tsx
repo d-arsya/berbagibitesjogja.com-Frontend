@@ -9,12 +9,13 @@ export const metadata: Metadata = {
   },
   description:
     'Berbagi Bites Jogja (BBJ) adalah Gerakan food rescue pertama di Jogja. Bergerak mengatasi Food Waste melalui Food Rescue dan Food Bank di wilayah Yogyakarta',
-  metadataBase: new URL('https://next.berbagibitesjogja.site'),
+  metadataBase: new URL('https://berbagibitesjogja.com'),
   openGraph: {
     title: 'Berbagi Bites Jogja',
+    siteName: "Berbagi Bites Jogja",
     description:
       'Berbagi Bites Jogja (BBJ) adalah Gerakan food rescue pertama di Jogja. Bergerak mengatasi Food Waste melalui Food Rescue dan Food Bank di wilayah Yogyakarta',
-    url: 'https://next.berbagibitesjogja.site',
+    url: 'https://berbagibitesjogja.com',
     type: 'website',
     images: [
       {

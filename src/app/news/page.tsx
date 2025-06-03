@@ -4,6 +4,7 @@ import NewsCard from "@/components/NewsCard";
 import IconTangan from 'public/svg/hand-love.svg'
 import IconJabat from 'public/svg/hand-shake.svg'
 import IconGotong from 'public/svg/work-together.svg'
+import { Metadata } from "next";
 
 interface PostAttribute {
     id: number;
@@ -56,7 +57,6 @@ interface NewsItem {
     date: string;
 }
 
-
 export default async function Page() {
     const response = await fetch('https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_embed', { next: { revalidate: 10 } })
     const rawNews = await response.json();
@@ -64,7 +64,7 @@ export default async function Page() {
         const featured = post._embedded?.['wp:featuredmedia']?.[0];
         return {
             id: post.id,
-            image: featured?.media_details?.sizes?.medium,
+            image: featured?.media_details?.sizes?.full,
             alt_image: featured?.alt_text || post.title.rendered,
             title: post.title.rendered,
             excerpt: post.excerpt.rendered,

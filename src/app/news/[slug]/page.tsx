@@ -1,5 +1,43 @@
 import SidebarNews from "@/components/SidebarNews";
 import Link from "next/link";
+import type { Metadata, ResolvingMetadata } from 'next'
+
+type Props = {
+    params: Promise<{ slug: string }>
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export async function generateMetadata(
+    { params, searchParams }: Props,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+    const slug = (await params).slug
+
+    // fetch post information
+    const post = await fetch(`https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?slug=${slug}`).then((res) =>
+        res.json()
+    )
+    const data = post[0];
+    const yoast = data.yoast_head_json;
+    console.log(data);
+
+    return {
+        title: data.title.rendered,
+        description: yoast.description,
+        openGraph: {
+            description: yoast.og_description,
+            title: yoast.og_title,
+            type: "article",
+            url: "https://berbagibitesjogja.com/news/" + slug,
+            images: yoast.og_image
+        },
+        twitter: {
+            title: data.title.rendered,
+            description: yoast.og_description,
+            images: yoast.og_image
+        }
+    }
+}
 
 function formatDate(date: string): string {
     const dateString = new Date(date);

@@ -8,7 +8,7 @@ interface Sitemap {
 
 async function getNews(): Promise<Sitemap[]> {
     const response = await fetch(
-        'https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_fields=slug,date'
+        'https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_fields=slug,date', { next: { revalidate: 3600 } }
     );
 
     if (!response.ok) {
