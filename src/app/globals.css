@@ -359,3 +359,17 @@ html {
     display: block;
   }
 }
+
+/* EMBLA CAROUSEL */
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 25%;
+  min-width: 0;
+}

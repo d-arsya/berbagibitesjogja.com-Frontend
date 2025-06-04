@@ -1,6 +1,6 @@
 # Berbagi Bites Jogja
 
-![Logo](https://media.berbagibitesjogja.site/Banner.png)
+![Logo](https://media.berbagibitesjogja.com/Banner.png)
 
 **Berbagi Bites Jogja (BBJ)** adalah program volunteer yang bertujuan untuk mengurangi **food waste** dan mendistribusikan makanan yang layak konsumsi kepada mereka yang membutuhkan di Yogyakarta. Kami bekerja sama dengan berbagai komunitas, organisasi, dan individu untuk mewujudkan keberlanjutan sosial dan lingkungan.
 
@@ -49,7 +49,7 @@ Berikut adalah teknologi yang digunakan dalam pengembangan sistem informasi Berb
 
 Untuk informasi lebih lanjut, bergabung sebagai relawan, mitra, atau donatur, hubungi kami melalui:
 
-- 🌐 Website: [berbagibitesjogja.site](https://berbagibitesjogja.site)
+- 🌐 Website: [berbagibitesjogja.com](https://berbagibitesjogja.com)
 - 📸 Instagram: [@berbagibitesjogja](https://www.instagram.com/berbagibitesjogja/)
 - 🎵 TikTok: [@berbagibitesjogja](https://www.tiktok.com/@berbagibitesjogja)
 - 💼 LinkedIn: [Berbagi Bites Jogja](https://www.linkedin.com/company/berbagibitesjogja)
@@ -66,4 +66,4 @@ Kami mengundang Anda untuk ikut serta dalam gerakan pengurangan limbah makanan d
 
 ### 🌍 Ikuti Kami untuk Update Terbaru
 
-[Website](https://berbagibitesjogja.site) | [Instagram](https://www.instagram.com/berbagibitesjogja/) | [TikTok](https://www.tiktok.com/@berbagibitesjogja) | [LinkedIn](https://www.linkedin.com/company/berbagibitesjogja)
+[Website](https://berbagibitesjogja.com) | [Instagram](https://www.instagram.com/berbagibitesjogja/) | [TikTok](https://www.tiktok.com/@berbagibitesjogja) | [LinkedIn](https://www.linkedin.com/company/berbagibitesjogja)
