@@ -9,9 +9,10 @@ import LovingHutLogo from 'public/logo/loving-hut.png'
 import FlamboyanLogo from 'public/logo/flamboyan.png'
 import BcaLogo from 'public/logo/bca.png'
 import HarperLogo from 'public/logo/harper.png'
+import PemkotLogo from 'public/logo/pemkot.png'
 import Image from 'next/image'
 export default function MitraCarousel() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ stopOnInteraction: false, delay: 200 })])
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ stopOnInteraction: false, delay: 2500 })])
     const partners = [
         {
             "name": "Holland Bakery",
@@ -40,6 +41,10 @@ export default function MitraCarousel() {
         {
             "name": "Hotel Harper Malioboro",
             "image": HarperLogo
+        },
+        {
+            "name": "Pemerintah Kota Yogyakarta",
+            "image": PemkotLogo
         },
     ]
 

@@ -36,11 +36,11 @@ export const metadata: Metadata = {
 };
 
 const guestLinks = [
-  { label: 'Program', href: '#program' },
-  { label: 'Dampak', href: '#dampak' },
+  { label: 'Program', href: '/#program' },
+  { label: 'Dampak', href: '/#dampak' },
   { label: 'Artikel', href: '/news' },
-  { label: 'Bergabung', href: '#gabung' },
-  { label: 'Kontak', href: '#kontak' },
+  { label: 'Bergabung', href: '/#gabung' },
+  { label: 'Kontak', href: '/#kontak' },
 ];
 
 export default function RootLayout({

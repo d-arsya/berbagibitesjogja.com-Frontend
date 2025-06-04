@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://next.berbagibitesjogja.site/sitemap.xml',
+        sitemap: 'https://berbagibitesjogja.com/sitemap.xml',
     }
 }
