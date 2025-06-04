@@ -180,7 +180,7 @@ export default function Home() {
         </div>
       </section>
       <section className='-mx-2 md:-mx-32 bg-slate-100 py-12 flex md:flex-row flex-col-reverse justify-between px-4 md:px-32'>
-        <Image src='/mission-image.png' width='550' height='550' className='rounded-md mt-6 md:mt-0 aspect-4/3 object-cover' alt='pembagian makanan' />
+        <Image src='/mission-image.jpg' width='550' height='550' className='rounded-md mt-6 md:mt-0 aspect-4/3 object-cover' alt='pembagian makanan' />
         <div className='w-full md:w-1/2'>
           <h1 className='text-navy font-bold text-4xl'>Misi Kami</h1>
           <p className='font-semibold text-slate-500 text-md md:text-lg mt-6'>Kami bertujuan mengurangi limbah makanan sekaligus membantu mengatasi kerawanan pangan di Yogyakarta melalui jaringan relawan dan mitra yang berdedikasi.</p>
