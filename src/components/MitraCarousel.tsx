@@ -11,7 +11,7 @@ import BcaLogo from 'public/logo/bca.png'
 import HarperLogo from 'public/logo/harper.png'
 import Image from 'next/image'
 export default function MitraCarousel() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay()])
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ stopOnInteraction: false, delay: 200 })])
     const partners = [
         {
             "name": "Holland Bakery",
