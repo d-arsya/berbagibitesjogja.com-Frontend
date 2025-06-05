@@ -60,11 +60,11 @@ export default function MitraCarousel() {
                 {partners.map(e => (
                     <Image
                         key={e.name}
-                        className="embla__slide aspect-video"
+                        className="embla__slide h-48 flex items-center justify-center object-contain p-4"
                         src={e.image}
                         alt={`${e.name} Logo`}
-
                     />
+
                 ))}
             </div>
 
