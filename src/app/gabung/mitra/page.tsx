@@ -43,7 +43,7 @@ export default function Page() {
           </div>
           <div className="w-full md:col-span-2">
             <h3 className="font-medium">Jenis Makanan yang Biasa Tersisa *</h3>
-            <div className="grid grid-cols-3 gap-3 mt-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-2">
               {["Nasi/Mie", "Lauk Pauk", "Sayuran", "Roti/Kue", "Buah-buahan", "Lainnya"].map((e) =>
                 <div key={e} className="flex flex-row gap-x-1 items-center">
                   <input type="radio" name="hari" id={"hari" + e} value={e} />
