@@ -4,12 +4,12 @@ export default function Page() {
       <div className="rounded-md bg-white shadow-xl p-6">
         <h1 className="font-bold text-2xl">Daftar Mitra</h1>
         <p className="mt-3 font-light">Bergabunglah sebagai mitra Berbagi Bites Jogja untuk berkontribusi dalam mengurangi limbah makanan di Yogyakarta.</p>
-        <div className="grid grid-cols-2 gap-6 mt-12">
-          <div className="w-full col-span-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+          <div className="w-full md:col-span-2">
             <h3 className="font-medium">Nama Bisnis/Organisasi*</h3>
             <input type="text" name="" id="" className="rounded-md border border-1 p-2 mt-2 w-full" />
           </div>
-          <div className="w-full col-span-2">
+          <div className="w-full md:col-span-2">
             <h3 className="font-medium">Jenis Bisnis*</h3>
             <select name="" id="" className="rounded-md border border-1 p-2 mt-2 w-full">
               <option value="">Restoran</option>
@@ -31,17 +31,17 @@ export default function Page() {
             <h3 className="font-medium">Nomor Telepon Bisnis*</h3>
             <input type="text" name="" id="" className="rounded-md border border-1 p-2 mt-2 w-full" />
           </div>
-          <div className="w-full col-span-2">
+          <div className="w-full md:col-span-2">
             <h3 className="font-medium">Alamat Lengkap*</h3>
             <textarea rows={3} name="" id="" className="rounded-md border border-1 p-2 mt-2 w-full"></textarea>
           </div>
-          <div className="w-full col-span-2">
+          <div className="w-full md:col-span-2">
             <h3 className="font-medium">Estimasi Makanan Berlebih per Hari*</h3>
             <select name="" id="" className="rounded-md border border-1 p-2 mt-2 w-full">
               <option value="">1 Kg</option>
             </select>
           </div>
-          <div className="w-full col-span-2">
+          <div className="w-full md:col-span-2">
             <h3 className="font-medium">Jenis Makanan yang Biasa Tersisa *</h3>
             <div className="grid grid-cols-3 gap-3 mt-2">
               {["Nasi/Mie", "Lauk Pauk", "Sayuran", "Roti/Kue", "Buah-buahan", "Lainnya"].map((e) =>

@@ -6,7 +6,7 @@ export default function Page() {
       <div className="rounded-md bg-white shadow-xl p-6">
         <h1 className="font-bold text-2xl">Relawan Sekarang</h1>
         <p className="mt-3 font-light">Bergabunglah dengan kami untuk membantu mengurangi limbah makanan dan mendistribusikannya kepada yang membutuhkan di Yogyakarta.</p>
-        <div className="grid grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           <div className="w-full">
             <h3 className="font-medium">Nama Lengkap*</h3>
             <input type="text" name="" id="" className="rounded-md border border-1 p-2 mt-2 w-full" />

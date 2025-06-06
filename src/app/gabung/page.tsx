@@ -34,7 +34,7 @@ export default function Page() {
                 </svg>Bergabung dengan komunitas yang berdedikasi</p>
 
               </div>
-              <Link className='rounded-full bg-navy w-full py-3 px-12 text-white text-xl hover:bg-tosca' href={'/gabung/relawan'}>Daftar sebagai Relawan</Link>
+              <Link className='rounded-full bg-navy w-full py-2 md:py-3 px-6 md:px-12 text-white text-sm md:text-xl hover:bg-tosca' href={'/gabung/relawan'}>Daftar sebagai Relawan</Link>
             </div>
             <div className="bg-white shadow-md p-12 rounded-xl">
               <div className='bg-navy-light rounded-full p-3 w-max h-max aspect-square m-auto'>
@@ -58,15 +58,15 @@ export default function Page() {
                 </svg>Dukungan operasional pengambilan makanan</p>
 
               </div>
-              <Link className='rounded-full bg-navy w-full py-3 px-12 text-white text-xl hover:bg-tosca' href={'/gabung/mitra'}>Daftar sebagai Mitra</Link>
+              <Link className='rounded-full bg-navy w-full py-2 md:py-3 px-6 md:px-12 text-white text-sm md:text-xl hover:bg-tosca' href={'/gabung/mitra'}>Daftar sebagai Mitra</Link>
             </div>
           </div>
 
         </section>
         <p className='my-12'>Punya pertanyaan tentang bergabung dengan kami?</p>
-        <div className='flex flex-row justify-center gap-x-12 text-navy'>
-          <Link className='flex rounded-full px-6 py-2 gap-x-2 border border-navy bg-white' href={'https://wa.me/628986950700'}><Mail />Hubungi Kami</Link>
-          <Link className='flex rounded-full px-6 py-2 gap-x-2 border border-navy bg-white' href={'https://wa.me/628986950700'}><CircleHelp /> Lihat FAQ</Link>
+        <div className='flex flex-row justify-center gap-x-6 md:gap-x-12 text-navy'>
+          <Link className='text-sm md:text-md flex rounded-full px-3 md:px-6 py-2 gap-x-2 border border-navy bg-white' href={'https://wa.me/628986950700'}><Mail />Hubungi Kami</Link>
+          <Link className='text-sm md:text-md flex rounded-full px-6 py-2 gap-x-2 border border-navy bg-white' href={'https://wa.me/628986950700'}><CircleHelp /> Lihat FAQ</Link>
         </div>
       </section>
     </>
