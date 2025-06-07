@@ -35,8 +35,8 @@ export function Footer() {
                         <Link href="/edukasi">
                             Edukasi Masyarakat
                         </Link>
-                        <Link href="/">
-                            Pelatihan Relawan
+                        <Link href="https://app.berbagibitesjogja.com/login">
+                            Login Relawan
                         </Link>
 
                     </nav>
