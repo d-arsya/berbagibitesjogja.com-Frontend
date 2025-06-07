@@ -38,6 +38,9 @@ export function Footer() {
                         <Link href="https://app.berbagibitesjogja.com/login">
                             Login Relawan
                         </Link>
+                        <Link href="https://app.berbagibitesjogja.com/form">
+                            Form Pendaftaran
+                        </Link>
 
                     </nav>
                 </div>
