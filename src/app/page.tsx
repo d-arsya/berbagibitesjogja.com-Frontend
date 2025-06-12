@@ -137,7 +137,7 @@ export default function Home() {
               </svg>
             </div>
             <h2 className='font-semibold text-md'>Sejak 2024</h2>
-            <div className='text-slate-500'>Berkomitmen melayani masyarakat Yogyakarta</div>
+            <div className='text-slate-500'>Atasi sampah makanan, bantu pangan Yogyakarta.</div>
           </div>
           <div data-aos='fade' data-aos-offset='100' className='bg-white shadow-xl rounded-md py-8 px-3 w-full md:w-1/5 flex flex-col gap-y-2'>
             <div className='bg-navy-light m-auto w-max p-6 shadow-md rounded-full'>
@@ -247,11 +247,11 @@ export default function Home() {
 
         </div>
       </section>
-      <section id='dampak' className='-mx-2 md:-mx-32 bg-navy-light py-12 px-4 md:px-32'>
+      <section id='dampak' className='-mx-2 md:-mx-32 bg-navy-light py-12 md:px-32'>
         <h1 className='text-gray-400 font-bold text-4xl text-center my-6'>Dampak Kami</h1>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg text-center'>Di Berbagi Bites Jogja, kami meyakini bahwa perubahan besar dimulai dari tindakan nyata yang konsisten. Melalui pendekatan kolaboratif dan program berbasis komunitas, kami telah membangun dampak yang berkelanjutan—mengurangi limbah makanan, memperkuat ketahanan pangan, dan mendorong adopsi praktik ramah lingkungan.</p>
         <div className='flex flex-col md:flex-row justify-between gap-x-6 gap-y-6 my-12 px-4 md:px-0'>
-          <div data-aos='fade-right' className='bg-white shadow-xl rounded-xl p-6 flex flex-row gap-x-4 justify-between'>
+          <div data-aos='fade-right' className='bg-white shadow-xl rounded-xl p-4 md:p-6 flex flex-row gap-x-4 justify-between'>
             <div className='bg-navy-light rounded-full p-5 h-max hidden md:block'>
               <Image width={40} src={IconDaun} alt='logo-icon' />
             </div>
@@ -259,21 +259,21 @@ export default function Home() {
               <h2 className='font-bold text-gray-500 text-2xl'>Dampak Lingkungan</h2>
               <p className='font-medium text-gray-400 my-6 text-lg'>Dengan menyelamatkan makanan dari tempat pembuangan sampah, kami telah mencapai dampak positif yang signifikan:</p>
               <div className='flex flex-col gap-y-6'>
-                <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
+                <div className='bg-navy-light p-4 md:p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
                   <Image width={40} src={IconPetir} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Pengurangan emisi gas rumah kaca</h4>
                     <p className='text-gray-400 text-lg'>yang dihasilkan dari pembusukan makanan, mendukung upaya mitigasi perubahan iklim di tingkat lokal.</p>
                   </div>
                 </div>
-                <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
+                <div className='bg-navy-light p-4 md:p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
                   <Image width={40} src={IconAir} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Penghematan jutaan liter air</h4>
                     <p className='text-gray-400 text-lg'>yang secara normal dibutuhkan dalam proses produksi, distribusi, dan penyimpanan pangan baru.</p>
                   </div>
                 </div>
-                <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
+                <div className='bg-navy-light p-4 md:p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
                   <Image width={40} src={IconRecycle} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Penyelamatan ribuan kilogram makanan</h4>
@@ -291,21 +291,21 @@ export default function Home() {
               <h2 className='font-bold text-gray-500 text-2xl'>Dampak Sosial</h2>
               <p className='font-medium text-gray-400 my-6 text-lg'>Program kami telah memberikan manfaat nyata bagi masyarakat melalui berbagai inisiatif yang berdampak baik pada lingkungan sosial:</p>
               <div className='flex flex-col gap-y-6'>
-                <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
+                <div className='bg-navy-light p-4 md:p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
                   <Image width={50} src={IconSendok} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Memenuhi kebutuhan gizi ribuan individu</h4>
                     <p className='text-gray-400 text-lg'>dari berbagai latar belakang, terutama anak-anak, lansia, dan komunitas rentan yang terdampak ketidakpastian pangan.</p>
                   </div>
                 </div>
-                <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
+                <div className='bg-navy-light p-4 md:p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
                   <Image width={50} src={IconBuilding} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Mendukung 10 institusi sosial</h4>
                     <p className='text-gray-400 text-lg'>termasuk panti asuhan dan komunitas lansia, dengan distribusi pangan yang berkelanjutan dan tepat sasaran.</p>
                   </div>
                 </div>
-                <div className='bg-navy-light p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
+                <div className='bg-navy-light p-4 md:p-6 rounded-xl flex flex-row justify-between gap-x-6 items-start'>
                   <Image width={50} src={IconJabat} alt='logo-icon' className='mt-3 hidden md:block' />
                   <div>
                     <h4 className='text-xl font-bold text-navy'>Meningkatkan kesadaran masyarakat</h4>
@@ -465,7 +465,7 @@ export default function Home() {
                 </div>
                 <span>
                   <h5 className='font-bold'>Alamat</h5>
-                  <Link href={'https://maps.app.goo.gl/SVBVQDueY8UdcXX79'}>Blk. A, Jl. Podocarpus II Bulaksumur, Sagan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</Link>
+                  <Link href={'https://maps.app.goo.gl/SVBVQDueY8UdcXX79'}>Pusat Studi Pancasila UGM<br />Jl. Podocarpus II D-22, Kampus UGM, Bulaksumur, Yogyakarta 55281</Link>
                 </span>
               </div>
               <div className='flex flex-row gap-x-3 items-center'>
