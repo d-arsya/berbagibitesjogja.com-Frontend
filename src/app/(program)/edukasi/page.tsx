@@ -1,38 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import ArrowLeft from 'public/svg/arrow-left.svg'
-import ArrowRight from 'public/svg/arrow-right.svg'
-import ArrowDown from 'public/svg/arrow-down.svg'
-import GambarMakanan from 'public/makan.png'
 import IconTangan from 'public/svg/hand-love.svg'
-import ProgramCard from '@/components/ProgramCard';
-
-const ceritaKeberhasilan = [
-  {
-    image: GambarMakanan,
-    icon: IconTangan,
-    title: "Penyelamatan Makanan",
-    description: "Mengumpulkan kelebihan makanan berkualitas dari restoran, hotel, dan toko untuk mencegah pemborosan. Program ini telah menyelamatkan lebih dari 5.000 kg makanan.",
-    link: "/penyelamatan",
-    flag: "Flagship Program",
-  },
-  {
-    image: GambarMakanan,
-    icon: IconTangan,
-    title: "Distribusi Makanan",
-    description: "Menyalurkan makanan yang diselamatkan ke panti asuhan, lansia, dan komunitas yang membutuhkan. Telah membantu lebih dari 10.000 penerima manfaat.",
-    link: "/distribusi",
-    flag: "High Impact",
-  },
-  {
-    image: GambarMakanan,
-    icon: IconTangan,
-    title: "Edukasi Masyarakat",
-    description: "Menyelenggarakan lokakarya dan kampanye untuk meningkatkan kesadaran tentang masalah limbah makanan. 50+ workshop telah dilaksanakan.",
-    link: "/edukasi",
-    flag: "Community Program",
-  },
-]
 
 export default function Page() {
   return (
@@ -314,7 +283,8 @@ export default function Page() {
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
     {/* Testimonial 1 */}
     <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center">
-      <img
+      <Image
+        width={64}
         src="/path-to-image.jpg"
         alt="Sarah Wijaya"
         className="w-16 h-16 rounded-full object-cover mb-4"
@@ -322,7 +292,7 @@ export default function Page() {
       <p className="font-bold text-md">Sarah Wijaya</p>
       <p className="text-xs text-slate-500">Peserta Workshop</p>
       <p className="mt-4 text-sm text-slate-600">
-        "Workshop yang sangat informatif dan praktis. Saya jadi lebih paham cara mengelola makanan dengan bijak."
+        &quot;Workshop yang sangat informatif dan praktis. Saya jadi lebih paham cara mengelola makanan dengan bijak.&quot;
       </p>
       <div className="mt-4 flex">
         <span className="text-yellow-500">★★★★★</span>
@@ -331,7 +301,8 @@ export default function Page() {
 
     {/* Testimonial 2 */}
     <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center">
-      <img
+      <Image
+        width={64}
         src="/path-to-image.jpg"
         alt="Budi Santoso"
         className="w-16 h-16 rounded-full object-cover mb-4"
@@ -339,7 +310,7 @@ export default function Page() {
       <p className="font-bold text-md">Budi Santoso</p>
       <p className="text-xs text-slate-500">Guru SMA</p>
       <p className="mt-4 text-sm text-slate-600">
-        "Program Sekolah Bebas Limbah sangat membantu siswa-siswa kami memahami pentingnya mengurangi limbah makanan."
+        &quot;Program Sekolah Bebas Limbah sangat membantu siswa-siswa kami memahami pentingnya mengurangi limbah makanan.&quot;
       </p>
       <div className="mt-4 flex">
         <span className="text-yellow-500">★★★★★</span>
@@ -348,7 +319,8 @@ export default function Page() {
 
     {/* Testimonial 3 */}
     <div className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center">
-      <img
+      <Image
+        width={64}
         src="/path-to-image.jpg"
         alt="Rina Putri"
         className="w-16 h-16 rounded-full object-cover mb-4"
@@ -356,7 +328,7 @@ export default function Page() {
       <p className="font-bold text-md">Rina Putri</p>
       <p className="text-xs text-slate-500">Food Blogger</p>
       <p className="mt-4 text-sm text-slate-600">
-        "Sesi Sustainable Cooking membuka mata saya tentang berbagai cara kreatif untuk memanfaatkan sisa bahan makanan."
+        &quot; Sesi Sustainable Cooking membuka mata saya tentang berbagai cara kreatif untuk memanfaatkan sisa bahan makanan.&quot;
       </p>
       <div className="mt-4 flex">
         <span className="text-yellow-500">★★★★☆</span>

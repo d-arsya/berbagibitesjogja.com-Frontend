@@ -1,3 +1,5 @@
+'use client';
+import { useEffect, useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import ArrowLeft from 'public/svg/arrow-left.svg'
@@ -5,36 +7,40 @@ import ArrowRight from 'public/svg/arrow-right.svg'
 import ArrowDown from 'public/svg/arrow-down.svg'
 import GambarMakanan from 'public/makan.png'
 import IconTangan from 'public/svg/hand-love.svg'
-import ProgramCard from '@/components/ProgramCard';
+import StoryCard from '@/components/StoryCard';
 
-const ceritaKeberhasilan = [
+const ceritaDampak = [
   {
     image: GambarMakanan,
-    icon: IconTangan,
-    title: "Penyelamatan Makanan",
-    description: "Mengumpulkan kelebihan makanan berkualitas dari restoran, hotel, dan toko untuk mencegah pemborosan. Program ini telah menyelamatkan lebih dari 5.000 kg makanan.",
-    link: "/penyelamatan",
-    flag: "Flagship Program",
+    title: "Berbagi berkah di bulan Ramadan: 1000+ Paket Makanan Didistribusikan",
+    date: "15 April 2025",
+    description: "Program distribusi makanan BBJ berhasil menyalurkan lebih dari 1000 paket makanan berbuka puasa ke berbagai komunitas di Yogyakarta",
+    link: "/dampak",
   },
   {
     image: GambarMakanan,
-    icon: IconTangan,
-    title: "Distribusi Makanan",
-    description: "Menyalurkan makanan yang diselamatkan ke panti asuhan, lansia, dan komunitas yang membutuhkan. Telah membantu lebih dari 10.000 penerima manfaat.",
-    link: "/distribusi",
-    flag: "High Impact",
-  },
-  {
-    image: GambarMakanan,
-    icon: IconTangan,
-    title: "Edukasi Masyarakat",
-    description: "Menyelenggarakan lokakarya dan kampanye untuk meningkatkan kesadaran tentang masalah limbah makanan. 50+ workshop telah dilaksanakan.",
-    link: "/edukasi",
-    flag: "Community Program",
+    title: "Kolaborasi dengan 5 Hotel Baru untuk Mengurangi Limbah Makanan",
+    date: "10 April 2025",
+    description: "BBJ Menjalin kerjasama dengan 5 hotel bintang lima di Yogyakarta untuk program penyelamatan makanan berlebih",
+    link: "/dampak",
   },
 ]
 
 export default function Page() {
+  const [isMdScreen, setIsMdScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMdScreen(window.innerWidth >= 768); // Check if screen width is >= md breakpoint (768px)
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <>
       <section className='bg-sky-100 -mx-2 md:-mx-32 py-6 text-center '>
@@ -62,22 +68,25 @@ export default function Page() {
             <Image
             width={30}
             src={IconTangan}
-            alt="icon-air"
+            alt="icon-tangan"
             className="mt-1 mr-1"
             />
             </div>
-            <Image
-            width={50}
-            src={ArrowRight}
-            alt="icon-air"
-            className="absolute invisible md:visible right-[-12] md:right-[-20]"
-            />
-            <Image
-              width={50}
-              src={ArrowDown}
-              alt="icon-air"
-              className="left-1/2 transform -translate-x-1/2 absolute visible md:invisible bottom-[-12px] md:bottom-[-20px]"
-            />
+            {isMdScreen ? (
+                <Image
+                  width={50}
+                  src={ArrowRight}
+                  alt="arrow-right"
+                  className="absolute right-[-20px]"
+                />
+              ) : (
+                <Image
+                  width={50}
+                  src={ArrowDown}
+                  alt="arrow-down"
+                  className="absolute left-1/2 transform -translate-x-1/2 bottom-[-20px]"
+                />
+              )}
             <h2 className='ml-2 mt-2 font-semibold text-md'>1. Pengumpulan</h2>
             <div className='ml-2 mt-2 text-slate-500'>Tim kami mengumpulkan makanan berlebih dari mitra donor seperti restoran, hotel, dan katering yang masih layak konsumsi</div>
             <ul className='ml-2 list-disc list-inside text-slate-500 text-sm list-(✔)'>
@@ -100,18 +109,21 @@ export default function Page() {
                 </defs>
               </svg>
             </div>
-            <Image
-            width={50}
-            src={ArrowRight}
-            alt="icon-air"
-            className="absolute invisible md:visible right-[-12] md:right-[-20]"
-            />
-            <Image
-              width={50}
-              src={ArrowDown}
-              alt="icon-air"
-              className="left-1/2 transform -translate-x-1/2 absolute visible md:invisible bottom-[-12px] md:bottom-[-20px]"
-            />
+            {isMdScreen ? (
+                <Image
+                  width={50}
+                  src={ArrowRight}
+                  alt="arrow-right"
+                  className="absolute right-[-20px]"
+                />
+              ) : (
+                <Image
+                  width={50}
+                  src={ArrowDown}
+                  alt="arrow-down"
+                  className="left-1/2 transform -translate-x-1/2 absolute bottom-[-12px] md:bottom-[-20px]"
+                />
+              )}
             <h2 className='ml-2 mt-2 font-semibold text-md'>2. Pengemasan</h2>
             <div className='ml-2 mt-2 text-slate-500'>Makanan disortir, dikemas ulang dengan standar kebersihan tinggi, dan disiapkan untuk distribusi</div>
             <ul className='ml-2 list-disc list-inside text-slate-500 text-sm'>
@@ -312,15 +324,14 @@ export default function Page() {
           <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
         </div>
         <div className='flex flex-col md:flex-row justify-between gap-x-12 gap-y-12 my-12 px-4 md:px-0'>
-                  {ceritaKeberhasilan.map((e, i) => {
+                  {ceritaDampak.map((e, i) => {
                     return (
-                      <ProgramCard
+                      <StoryCard
                         image={e.image}
                         description={e.description}
                         link={e.link}
                         title={e.title}
-                        icon={e.icon}
-                        flag={e.flag}
+                        date={e.date}
                         key={i}
                       />
                     )

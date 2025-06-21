@@ -2,24 +2,24 @@ import Image, { StaticImageData } from "next/image"
 import Link from "next/link"
 interface ProgramAttribute {
     key: number,
-    flag: string,
     image: StaticImageData,
     title: string,
+    date: string,
     description: string,
-    icon: string,
     link: string
 }
-export default function ProgramCard({ ...data }: ProgramAttribute) {
+export default function StoryCard({ ...data }: ProgramAttribute) {
     return (
-        <div className='shadow-xl rounded-md overflow-hidden' key={data.key}>
+        <div className='bg-slate-100 shadow-xl rounded-md overflow-hidden' key={data.key}>
             <div className="relative w-full">
                 <Image className="object-cover" src={data.image} alt='Makan' />
             </div>
-            <div className='p-6 md:p-12'>
-                <div className='flex flex-row gap-x-3 items-center'>
-                    <span className='font-bold text-lg text-gray-400'>{data.title}</span>
+            <div className='p-2 md:p-4'>
+                <div className='flex flex-col gap-x-3'>
+                    <span className='text-navy text-sm'>{data.date}</span>
+                    <span className='font-bold text-lg'>{data.title}</span>   
                 </div>
-                <p className='my-8 text-gray-400'>{data.description}</p>
+                <p className='my-2 text-gray-400'>{data.description}</p>
                 <Link className='text-navy' href={data.link}>Selengkapnya</Link>
 
             </div>

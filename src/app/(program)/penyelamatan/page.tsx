@@ -1,3 +1,5 @@
+'use client';
+import { useEffect, useState } from 'react';
 import Link from 'next/link'
 import Image from 'next/image'
 import ArrowLeft from 'public/svg/arrow-left.svg'
@@ -35,6 +37,20 @@ const ceritaKeberhasilan = [
 ]
 
 export default function Page() {
+  const [isMdScreen, setIsMdScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMdScreen(window.innerWidth >= 768); // Check if screen width is >= md breakpoint (768px)
+    };
+
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <>
       <section className='bg-sky-100 -mx-2 md:-mx-32 py-6 text-center '>
@@ -78,18 +94,20 @@ export default function Page() {
                 <path d="M12 0C15.1826 0 18.2348 1.26428 20.4853 3.51472C22.7357 5.76516 24 8.8174 24 12C24 15.1826 22.7357 18.2348 20.4853 20.4853C18.2348 22.7357 15.1826 24 12 24C8.8174 24 5.76516 22.7357 3.51472 20.4853C1.26428 18.2348 0 15.1826 0 12C0 8.8174 1.26428 5.76516 3.51472 3.51472C5.76516 1.26428 8.8174 0 12 0ZM10.875 5.625V12C10.875 12.375 11.0625 12.7266 11.3766 12.9375L15.8766 15.9375C16.3922 16.2844 17.0906 16.1437 17.4375 15.6234C17.7844 15.1031 17.6437 14.4094 17.1234 14.0625L13.125 11.4V5.625C13.125 5.00156 12.6234 4.5 12 4.5C11.3766 4.5 10.875 5.00156 10.875 5.625Z" fill="#009CA6" />
               </svg>
             </div>
+            {isMdScreen ? (
             <Image
             width={50}
             src={ArrowRight}
             alt="icon-air"
-            className="absolute invisible md:visible right-[-12] md:right-[-20]"
+            className="absolute right-[-12] md:right-[-20]"
             />
+            ) : (
             <Image
               width={50}
               src={ArrowDown}
               alt="icon-air"
-              className="left-1/2 transform -translate-x-1/2 absolute visible md:invisible bottom-[-12px] md:bottom-[-20px]"
-            />
+              className="left-1/2 transform -translate-x-1/2 absolute bottom-[-12px] md:bottom-[-20px]"
+            />)}
             <h2 className='ml-2 font-semibold text-md'>1. Identifikasi</h2>
             <div className='ml-2 text-slate-500'>Menerima informasi dari mitra tentang makanan berlebih yang perlu diselamatkan</div>
           </div>
@@ -107,18 +125,20 @@ export default function Page() {
                 </defs>
               </svg>
             </div>
+            {isMdScreen ? (
             <Image
             width={50}
             src={ArrowRight}
             alt="icon-air"
             className="absolute invisible md:visible right-[-12] md:right-[-20]"
             />
+            ) : (
             <Image
               width={50}
               src={ArrowDown}
               alt="icon-air"
               className="left-1/2 transform -translate-x-1/2 absolute visible md:invisible bottom-[-12px] md:bottom-[-20px]"
-            />
+            />)}
             <h2 className='ml-2 font-semibold text-md'>2. Evaluasi</h2>
             <div className='ml-2 text-slate-500'>Tim ahli mengevaluasi kelayakan dan keamanan makanan untuk dikonsumsi.</div>
           </div>
@@ -130,18 +150,20 @@ export default function Page() {
                 <path d="M2.23125 14.0813L10.7016 21.9891C11.0531 22.3172 11.5172 22.5 12 22.5C12.4828 22.5 12.9469 22.3172 13.2984 21.9891L21.7687 14.0813C23.1938 12.7547 24 10.8938 24 8.94844V8.67657C24 5.40001 21.6328 2.60626 18.4031 2.06719C16.2656 1.71094 14.0906 2.40938 12.5625 3.93751L12 4.50001L11.4375 3.93751C9.90938 2.40938 7.73438 1.71094 5.59688 2.06719C2.36719 2.60626 0 5.40001 0 8.67657V8.94844C0 10.8938 0.80625 12.7547 2.23125 14.0813Z" fill="#009CA6" />
               </svg>
             </div>
+            {isMdScreen ? (
             <Image
             width={50}
             src={ArrowRight}
             alt="icon-air"
             className="absolute invisible md:visible right-[-12] md:right-[-20]"
             />
+            ) : (
             <Image
               width={50}
               src={ArrowDown}
               alt="icon-air"
               className="left-1/2 transform -translate-x-1/2 absolute visible md:invisible bottom-[-12px] md:bottom-[-20px]"
-            />
+            />)}
             <h2 className='ml-2 font-semibold text-md'>3. Pengambilan</h2>
             <div className='ml-2 text-slate-500'>Pengambilan makanan dengan kendaraan berpendingin khusus untuk menjaga kualitas.</div>
           </div>
@@ -173,18 +195,21 @@ export default function Page() {
             {/* Left Chart: Makanan Terselamatkan per Kategori */}
             <div className="bg-white shadow-md rounded-lg p-6">
               <h2 className="text-lg font-bold mb-4">Makanan Terselamatkan per Kategori</h2>
-              <div className="flex items-end justify-between h-40">
-                <div className="flex flex-col items-center">
+              <div className="flex items-end content-end justify-between h-40">
+                <div className="flex flex-col items-center h-40">
+                  <div className="w-16 h-[60%] rounded-t-md"></div>
                   <div className="bg-teal-500 w-16 h-[40%] rounded-t-md"></div>
                   <p className="mt-2 text-sm font-semibold">40%</p>
                   <p className="mt-1 text-sm text-slate-500">Siap Saji</p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center h-40">
+                  <div className="w-16 h-[65%] rounded-t-md"></div>
                   <div className="bg-navy w-16 h-[35%] rounded-t-md"></div>
                   <p className="mt-2 text-sm font-semibold">35%</p>
                   <p className="mt-1 text-sm text-slate-500">Bahan Mentah</p>
                 </div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center h-40">
+                  <div className="w-16 h-[75%] rounded-t-md"></div>
                   <div className="bg-teal-100 w-16 h-[25%] rounded-t-md"></div>
                   <p className="mt-2 text-sm font-semibold">25%</p>
                   <p className="mt-1 text-sm text-slate-500">Kemasan</p>
@@ -278,10 +303,11 @@ export default function Page() {
             </span>
             <h2 className="text-lg font-bold">Testimoni Mitra</h2>
             <p className="text-slate-600 text-sm">
-              "Program ini sangat membantu kami dalam mengelola surplus makanan dengan lebih efektif dan berkelanjutan."
+            &quot;Program ini sangat membantu kami dalam mengelola surplus makanan dengan lebih efektif dan berkelanjutan.&quot;
             </p>
             <div className="flex items-center gap-4 mt-4">
-              <img
+              <Image
+                width={50}
                 src="/path-to-image.jpg"
                 alt="Budi Santoso"
                 className="w-12 h-12 rounded-full object-cover"
