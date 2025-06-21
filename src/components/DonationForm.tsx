@@ -304,6 +304,7 @@ const DonationForm: React.FC = () => {
         )}
       </div>
 
+        
       {/* Right Section: Impact */}
 
 

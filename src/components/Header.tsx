@@ -29,7 +29,7 @@ export function Header({ links }: HeaderProps) {
                     ))}
                 </ul>
             </nav>
-            <Link className='bg-navy text-sm rounded-full h-max py-2 text-white font-semibold px-4 md:px-6 hidden md:block' href="/">Donasi Sekarang</Link>
+            <Link className='bg-navy text-sm rounded-full h-max py-2 text-white font-semibold px-4 md:px-6 hidden md:block' href="/donasi">Donasi Sekarang</Link>
             <MobileMenu links={links} />
         </header>
     )

@@ -11,14 +11,14 @@ export default function Page() {
       <p className=''>{' > '}</p>
       <p className='text-gray-500'> Donasi</p>
       </div>
-      <Link href={'/gabung/mitra'} className='flex flex-row text-navy'><Image width={15} src={ArrowLeft} alt='icon-air' className='mt-2 mr-2' />Kembali ke Beranda</Link>
+      <Link href={'./'} className='flex flex-row text-navy'><Image width={15} src={ArrowLeft} alt='icon-air' className='mt-2 mr-2' />Kembali ke Beranda</Link>
                 
-      <section className='py-12 text-center'>
-        <h1 className='text-navy text-4xl font-bold'>Dampak Usaha Kami</h1>
+      <div className='py-12 text-center'>
+        <h1 className='text-4xl font-bold'>Donasi Sekarang</h1>
         <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
-        <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg'>Setiap angka yang tercatat bukan sekadar statistik, melainkan cerminan nyata dari perubahan yang kita upayakan bersama. Di balik setiap angka, terdapat langkah konkret, kerja keras, dan komitmen kolektif untuk membangun sebuah kota yang lebih inklusif, berdaya, dan berkelanjutan untuk semua warganya.</p>
+        <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg max-w-3/5'>Pilih jenis donasi yang ingin Anda berikan untuk mendukung misi kami dalam mengurangi limbah makanan dan membantu masyarakat yang membutuhkan</p>
         
-      </section>
+      </div>
       <DonationForm />
     </>
   );
