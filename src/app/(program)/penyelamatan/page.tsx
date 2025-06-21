@@ -17,6 +17,7 @@ const ceritaKeberhasilan = [
     description: "Mengumpulkan kelebihan makanan berkualitas dari restoran, hotel, dan toko untuk mencegah pemborosan. Program ini telah menyelamatkan lebih dari 5.000 kg makanan.",
     link: "/penyelamatan",
     flag: "Flagship Program",
+    aos: 'fade-right'
   },
   {
     image: GambarMakanan,
@@ -25,6 +26,7 @@ const ceritaKeberhasilan = [
     description: "Menyalurkan makanan yang diselamatkan ke panti asuhan, lansia, dan komunitas yang membutuhkan. Telah membantu lebih dari 10.000 penerima manfaat.",
     link: "/distribusi",
     flag: "High Impact",
+    aos: 'fade-up'
   },
   {
     image: GambarMakanan,
@@ -33,6 +35,7 @@ const ceritaKeberhasilan = [
     description: "Menyelenggarakan lokakarya dan kampanye untuk meningkatkan kesadaran tentang masalah limbah makanan. 50+ workshop telah dilaksanakan.",
     link: "/edukasi",
     flag: "Community Program",
+    aos: 'fade-left'
   },
 ]
 
@@ -289,6 +292,7 @@ export default function Page() {
                         title={e.title}
                         icon={e.icon}
                         flag={e.flag}
+                        aos={e.aos}
                         key={i}
                       />
                     )

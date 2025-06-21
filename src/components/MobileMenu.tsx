@@ -11,6 +11,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { DropdownMenuPortal } from "@radix-ui/react-dropdown-menu";
 
 interface NavLink {
     label: string;
@@ -24,25 +25,28 @@ interface HeaderProps {
 export function MobileMenu({ links }: HeaderProps) {
 
     return (
-        <nav className="block md:hidden">
+        <nav className="md:hidden">
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <Button variant="outline">Menu</Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>Berbagi Bites Jogja</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    {links.map((e) => {
-                        return (
+                <DropdownMenuPortal>
+                    <DropdownMenuContent className="w-56">
+                        <DropdownMenuLabel>Berbagi Bites Jogja</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        {links.map((e) => {
+                            return (
 
-                            <DropdownMenuCheckboxItem key={e.label}>
-                                <Link href={e.href}>{e.label}</Link>
-                            </DropdownMenuCheckboxItem>
-                        )
-                    }
+                                <DropdownMenuCheckboxItem key={e.label}>
+                                    <Link href={e.href}>{e.label}</Link>
+                                </DropdownMenuCheckboxItem>
+                            )
+                        }
 
-                    )}
-                </DropdownMenuContent>
+                        )}
+                    </DropdownMenuContent>
+
+                </DropdownMenuPortal>
             </DropdownMenu>
 
         </nav>

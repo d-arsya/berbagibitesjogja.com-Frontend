@@ -26,17 +26,17 @@ export function Footer() {
                 <div>
                     <p className='font-bold text-xl'>Program</p>
                     <nav className='flex flex-col gap-y-2 mt-4'>
-                        <Link href="/penyelamatan">
-                            Penyelamatan
-                        </Link>
-                        <Link href="/distribusi">
-                            Distribusi Makanan
-                        </Link>
-                        <Link href="/edukasi">
-                            Edukasi Masyarakat
+                        <Link href="/news">
+                            Artikel
                         </Link>
                         <Link href="/">
-                            Pelatihan Relawan
+                            Penyelamatan
+                        </Link>
+                        <Link href="/">
+                            Distribusi Makanan
+                        </Link>
+                        <Link href="/">
+                            Edukasi Masyarakat
                         </Link>
 
                     </nav>
@@ -44,17 +44,23 @@ export function Footer() {
                 <div>
                     <p className='font-bold text-xl'>Terlibat</p>
                     <nav className='flex flex-col gap-y-2 mt-4'>
-                        <Link href="/donasi">
+                        <Link href="https://wa.me/628986950700">
                             Donasi
                         </Link>
-                        <Link href="/gabung/relawan">
+                        <Link href="https://wa.me/628986950700">
                             Menjadi Relawan
                         </Link>
-                        <Link href="/gabung/mitra">
+                        <Link href="https://wa.me/628986950700">
                             Menjadi Mitra
                         </Link>
-                        <Link href="/">
+                        {/* <Link href="/">
                             Acara Mendatang
+                        </Link> */}
+                        <Link href="https://app.berbagibitesjogja.com/login">
+                            Login Relawan
+                        </Link>
+                        <Link href="https://app.berbagibitesjogja.com/form">
+                            Form Pendaftaran
                         </Link>
 
                     </nav>
@@ -65,9 +71,7 @@ export function Footer() {
                         <Link className='flex' href="https://maps.app.goo.gl/vHHZVQ4ymYhW1JhX6">
                             <MapPin className='w-20' />
                             <span className='w-full'>
-                                Blk. A, Jl. Podocarpus II Bulaksumur, Sagan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
-
-                            </span>
+                                Pusat Studi Pancasila UGM<br />Jl. Podocarpus II D-22, Kampus UGM, Bulaksumur, Yogyakarta 55281</span>
                         </Link>
                         <Link className='flex' href="https://wa.me/628986950700">
                             <Phone className='w-20' />
@@ -87,12 +91,8 @@ export function Footer() {
                 </div>
             </nav>
             <div className="flex md:flex-row flex-col justify-between items-center mt-12 gap-y-6">
-                <span>© 2025 Berbagi Bites Jogja. Semua hak dilindungi.</span>
-                <nav className="flex justify-between gap-x-4">
-                    <Link href="/">Kebijakan Privasi</Link>
-                    <Link href="/">Syarat & Ketentuan</Link>
-                    <Link href="/sitemap.xml">Peta Situs</Link>
-                </nav>
+                <span className='text-center'>© 2025 Berbagi Bites Jogja. Semua hak dilindungi.</span>
+                <Link href={'https://psp.ugm.ac.id'}>Pusat Studi Pancasila UGM</Link>
             </div>
         </footer >
     )
