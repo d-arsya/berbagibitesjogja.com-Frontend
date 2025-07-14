@@ -29,13 +29,13 @@ export function Footer() {
                         <Link href="/news">
                             Artikel
                         </Link>
-                        <Link href="/">
+                        <Link href="/penyelamatan">
                             Penyelamatan
                         </Link>
-                        <Link href="/">
+                        <Link href="/distribusi">
                             Distribusi Makanan
                         </Link>
-                        <Link href="/">
+                        <Link href="/edukasi">
                             Edukasi Masyarakat
                         </Link>
 
