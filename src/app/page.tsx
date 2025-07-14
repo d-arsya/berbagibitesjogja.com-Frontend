@@ -64,19 +64,37 @@ export default function Home() {
   return (
     <>
 
-
-      <section className="-mx-2 md:-mx-32 bg-cover bg-no-repeat bg-[url('/jumbotron-image.png')] bg-gray-700 bg-blend-soft-light h-screen md:h-max bg-center md:bg-right-top">
-        <div className="px-4 mx-auto max-w-screen-xl py-24 lg:py-42">
-          <h1 data-aos='fade-left' className="text-white font-bold text-4xl md:text-6xl w-full md:w-3/4">Bersama Kurangi <span className="text-navy">Limbah Makanan</span> di Jogja</h1>
-          <p data-aos='fade-right' className="text-white w-full md:w-1/2 mt-6 font-medium text-lg md:text-xl leading-6 md:leading-10">Berbagi Bites Jogja menyelamatkan makanan berlebih dan mendistribusikannya kepada mereka yang membutuhkan untuk menciptakan Yogyakarta yang lebih berkelanjutan dan peduli.</p>
-          <nav className='flex gap-x-4 mt-6'>
-            <Link data-aos='fade-up' href='https://wa.me/628986950700' className='bg-navy text-sm md:text-md text-white font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
+      <section className="relative -mx-2 md:-mx-32 h-screen md:h-max overflow-hidden">
+        <Image
+          src="/jumbotron-image.png"
+          alt="Jumbotron"
+          fill
+          priority
+          className="object-cover object-center md:object-right-top z-0 brightness-75"
+        />
+        <div className="absolute inset-0 bg-gray-700 mix-blend-soft-light z-0" />
+        <div className="relative z-10 px-4 mx-auto max-w-screen-xl py-24 lg:py-42">
+          <h1 data-aos="fade-left" className="text-white font-bold text-4xl md:text-6xl w-full md:w-3/4">
+            Bersama Kurangi <span className="text-navy">Limbah Makanan</span> di Jogja
+          </h1>
+          <p data-aos="fade-right" className="text-white w-full md:w-1/2 mt-6 font-medium text-lg md:text-xl leading-6 md:leading-10">
+            Berbagi Bites Jogja menyelamatkan makanan berlebih dan mendistribusikannya kepada mereka yang membutuhkan untuk menciptakan Yogyakarta yang lebih berkelanjutan dan peduli.
+          </p>
+          <nav className="flex gap-x-4 mt-6">
+            <Link
+              data-aos="fade-up"
+              href="https://wa.me/628986950700"
+              className="bg-navy text-sm md:text-md text-white font-medium px-2 md:px-6 py-2 rounded-md shadow-md"
+            >
               Donasi Sekarang
             </Link>
-            <Link data-aos='fade-left' href='https://wa.me/628986950700' className='bg-white text-sm md:text-md text-navy font-medium px-2 md:px-6 py-2 rounded-md shadow-md'>
+            <Link
+              data-aos="fade-left"
+              href="https://wa.me/628986950700"
+              className="bg-white text-sm md:text-md text-navy font-medium px-2 md:px-6 py-2 rounded-md shadow-md"
+            >
               Pelajari Program Kami
             </Link>
-
           </nav>
         </div>
       </section>
