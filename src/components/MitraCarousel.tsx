@@ -10,6 +10,7 @@ import FlamboyanLogo from 'public/logo/flamboyan.png'
 import BcaLogo from 'public/logo/bca.png'
 import HarperLogo from 'public/logo/harper.png'
 import PemkotLogo from 'public/logo/pemkot.png'
+import RoyalLogo from 'public/logo/royal-ambarukmo.webp'
 import Image from 'next/image'
 export default function MitraCarousel() {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [Autoplay({ stopOnInteraction: false, delay: 2500 })])
@@ -45,6 +46,10 @@ export default function MitraCarousel() {
         {
             "name": "Pemerintah Kota Yogyakarta",
             "image": PemkotLogo
+        },
+        {
+            "name": "Royal Ambarrukmo Hotel",
+            "image": RoyalLogo
         },
     ]
 
