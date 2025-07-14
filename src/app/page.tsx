@@ -229,7 +229,7 @@ export default function Home() {
         <h3 id='program' className='bg-navy-light text-navy w-max text-center m-auto p-3 rounded-full text-md font-medium'>Program Unggulan</h3>
         <h2 className='text-navy font-bold text-4xl text-center my-6'>Program Kami</h2>
         <p className='font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg text-center'>Kami bekerja dengan penuh dedikasi melalui berbagai program inovatif yang dirancang untuk mengurangi limbah makanan sekaligus memberdayakan komunitas di Yogyakarta. Setiap inisiatif yang kami jalankan berakar pada semangat kolaborasi, keberlanjutan, dan keadilan sosial.</p>
-        <div className='flex flex-col md:flex-row justify-between gap-x-12 gap-y-12 my-12 px-4 md:px-0'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-12 px-3 md:px-0 my-12'>
           {ourPrograms.map((e, i) => {
             return (
               <ProgramCard
