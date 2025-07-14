@@ -46,9 +46,9 @@ export default function Page() {
           <Link href={'./'} className='flex flex-row text-navy'><Image width={15} src={ArrowLeft} alt='icon-air' className='mt-2 mr-2' />Kembali ke Beranda</Link>
         </div>
 
-        <div className='py-12 text-center'>
-          <h1 className='text-3xl md:text-4xl font-bold'>Program Edukasi dan kampanye</h1>
-          <p className='mt-8 font-medium text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg max-w-3/5'>Membangun dan mengajak masyarakat untuk berperan aktif dalam mengurangi limbah makanan melalui edukasi dan kampanye yang kreatif</p>
+        <div className='py-12 text-center px-3'>
+          <h1 className='text-3xl md:text-4xl font-bold'>Program Edukasi dan Kampanye</h1>
+          <p className='mt-8 font-medium text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-sm md:text-lg'>Membangun dan mengajak masyarakat untuk berperan aktif dalam mengurangi limbah makanan melalui edukasi dan kampanye yang kreatif</p>
           <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function Page() {
                 <li className="flex items-center gap-4">
                   <div className="bg-navy text-white p-3 rounded-full">
                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_4_4290)">
+                      <g clipPath="url(#clip0_4_4290)">
                         <path d="M5 2C5 0.896875 5.89687 0 7 0H18C19.1031 0 20 0.896875 20 2V11C20 12.1031 19.1031 13 18 13H10.525C10.1562 12.2031 9.59062 11.5156 8.8875 11H12V10C12 9.44687 12.4469 9 13 9H15C15.5531 9 16 9.44687 16 10V11H18V2H7V3.53437C6.4125 3.19375 5.72813 3 5 3V2ZM5 4C5.39397 4 5.78407 4.0776 6.14805 4.22836C6.51203 4.37913 6.84274 4.6001 7.12132 4.87868C7.3999 5.15726 7.62087 5.48797 7.77164 5.85195C7.9224 6.21593 8 6.60603 8 7C8 7.39397 7.9224 7.78407 7.77164 8.14805C7.62087 8.51203 7.3999 8.84274 7.12132 9.12132C6.84274 9.3999 6.51203 9.62087 6.14805 9.77164C5.78407 9.9224 5.39397 10 5 10C4.60603 10 4.21593 9.9224 3.85195 9.77164C3.48797 9.62087 3.15726 9.3999 2.87868 9.12132C2.6001 8.84274 2.37913 8.51203 2.22836 8.14805C2.0776 7.78407 2 7.39397 2 7C2 6.60603 2.0776 6.21593 2.22836 5.85195C2.37913 5.48797 2.6001 5.15726 2.87868 4.87868C3.15726 4.6001 3.48797 4.37913 3.85195 4.22836C4.21593 4.0776 4.60603 4 5 4ZM4.16563 11H5.83125C8.13437 11 10 12.8656 10 15.1656C10 15.625 9.62812 16 9.16562 16H0.834375C0.371875 16 0 15.6281 0 15.1656C0 12.8656 1.86563 11 4.16563 11Z" fill="white" />
                       </g>
                       <defs>
@@ -117,7 +117,7 @@ export default function Page() {
                       <p className="text-xs text-slate-500">09:00 - 12:00 WIB</p>
                     </div>
                   </div>
-                  <button className="bg-navy text-white font-semibold py-2 px-4 rounded-full hover:bg-tosca">
+                  <button className="bg-navy text-white text-sm font-medium py-2 px-4 rounded-full hover:bg-tosca">
                     Daftar
                   </button>
                 </div>
@@ -133,7 +133,7 @@ export default function Page() {
                       <p className="text-xs text-slate-500">13:00 - 16:00 WIB</p>
                     </div>
                   </div>
-                  <button className="bg-navy text-white font-semibold py-2 px-4 rounded-full hover:bg-tosca">
+                  <button className="bg-navy text-white text-sm font-medium py-2 px-4 rounded-full hover:bg-tosca">
                     Daftar
                   </button>
                 </div>
@@ -149,7 +149,7 @@ export default function Page() {
                       <p className="text-xs text-slate-500">13:00 - 16:00 WIB</p>
                     </div>
                   </div>
-                  <button className="bg-navy text-white font-semibold py-2 px-4 rounded-full hover:bg-tosca">
+                  <button className="bg-navy text-white text-sm font-medium py-2 px-4 rounded-full hover:bg-tosca">
                     Daftar
                   </button>
                 </div>
@@ -167,7 +167,7 @@ export default function Page() {
               <h2 className="text-lg font-bold mb-4">Kampanye Aktif</h2>
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
+                  <div className="flex justify-between flex-wrap gap-y-1 items-center mb-2">
                     <p className="font-bold text-md">#JogjaNoFoodWaste</p>
                     <p className="text-xs bg-navy-light text-navy py-2 px-3 rounded-full">Sedang Berlangsung</p>
                   </div>
@@ -175,7 +175,7 @@ export default function Page() {
                   <p className="text-xs text-slate-400 mt-2"> <Users className='inline text-black w-4' /> 1.2K Partisipan <span className='font-bold text-black'>#</span> 5K Posts</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
-                  <div className="flex justify-between items-center mb-2">
+                  <div className="flex justify-between flex-wrap gap-y-1 items-center mb-2">
                     <p className="font-bold text-md">Sekolah Bebas Limbah</p>
                     <p className="text-xs bg-navy-light text-navy py-2 px-3 rounded-full">Program Baru</p>
                   </div>
@@ -189,7 +189,7 @@ export default function Page() {
             {/* Materi Edukasi */}
             <div className="bg-navy-light shadow-md rounded-lg p-6 mt-12">
               <h2 className="text-lg font-bold mb-4">Materi Edukasi</h2>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
                 <div className="flex bg-white p-4 rounded-lg text-left gap-2 items-center">
                   <FileText />

@@ -49,20 +49,20 @@ export default function Page() {
           <Link href={'./'} className='flex flex-row text-navy'><Image width={15} src={ArrowLeft} alt='icon-air' className='mt-2 mr-2' />Kembali ke Beranda</Link>
         </div>
 
-        <div className='py-12 text-center'>
-          <h1 className='text-4xl font-bold'>Program Penyelamatan Makanan</h1>
-          <p className='mt-8 font-medium text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg max-w-3/5'>Menyelamatkan makanan berlebih dari pembuangan dan mengubahnya menjadi berkah bagi sesama adalah langkah awal menuju ketahanan pangan nasional</p>
+        <div className='py-12 text-center px-3'>
+          <h1 className='text-3xl md:text-4xl font-bold'>Program Penyelamatan Makanan</h1>
+          <p className='mt-8 font-medium text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-sm md:text-lg'>Menyelamatkan makanan berlebih dari pembuangan dan mengubahnya menjadi berkah bagi sesama adalah langkah awal menuju ketahanan pangan nasional</p>
           <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
         </div>
       </section>
       <section className='-mx-2 md:-mx-32 py-12 text-center'>
-        <div className='py-12 text-center'>
-          <h1 className='text-4xl font-bold'>Proses penyelamatan</h1>
-          <p className=' mt-8 font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg max-w-3/5'>Setiap langkah dalam proses penyelamatan makanan dirancang untuk memastikan kualitas dan keamanan</p>
+        <div className='py-12 text-center px-3'>
+          <h1 className='text-3xl md:text-4xl font-bold'>Proses penyelamatan</h1>
+          <p className='mt-8 font-medium text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-sm md:text-lg'>Setiap langkah dalam proses penyelamatan makanan dirancang untuk memastikan kualitas dan keamanan</p>
           <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
 
 
-          <div className='flex justify-between my-12 gap-x-6 gap-y-6 px-6 md:px-48 flex-col md:flex-row'>
+          <div className='flex justify-between my-6 gap-x-6 gap-y-3 px-6 md:px-48 flex-col md:flex-row'>
             <div className='text-left items-start relative bg-white shadow-xl rounded-md py-8 px-3 w-full md:w-1/4 flex flex-col gap-y-2'>
               <div className='bg-navy ml-2 p-3 shadow-md rounded-full'>
                 <Phone className='text-white' />
@@ -119,9 +119,9 @@ export default function Page() {
       </section>
 
       <section className='-mx-2 md:-mx-32 py-12 bg-navy-light'>
-        <div className='text-center'>
-          <h1 className='text-4xl font-bold'>Statistik Penyelamatan</h1>
-          <p className=' mt-8 font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg max-w-3/5'>Data pencapaian program penyelamatan makanan tahun 2025</p>
+        <div className='text-center px-3'>
+          <h1 className='text-3xl md:text-4xl font-bold'>Statistik Penyelamatan</h1>
+          <p className='mt-8 font-medium text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-sm md:text-lg'>Data pencapaian program penyelamatan makanan tahun 2025</p>
           <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-32">
@@ -217,12 +217,12 @@ export default function Page() {
       </section>
 
       <section className='py-12'>
-        <div className='text-center'>
-          <h1 className='text-4xl font-bold'>Cerita Keberhasilan</h1>
-          <p className=' mt-8 font-semibold text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-md md:text-lg max-w-3/5'>Kisah-kisah inspiratif dari program penyelamatan makanan kami</p>
+        <div className='text-center px-3'>
+          <h1 className='text-3xl md:text-4xl font-bold'>Cerita Keberhasilan</h1>
+          <p className='mt-8 font-medium text-slate-500 w-full md:w-3/4 m-auto leading-6 md:leading-8 text-sm md:text-lg'>Kisah-kisah inspiratif dari program penyelamatan makanan kami</p>
           <div className='bg-navy my-8 h-1 w-30 m-auto'></div>
         </div>
-        <div className='grid md:grid-cols-3 grid-cols-1 gap-x-12 gap-y-12'>
+        <div className='grid md:grid-cols-3 grid-cols-1 gap-x-12 gap-y-12 px-6'>
           {ceritaKeberhasilan.map((e, i) => {
             return (
               <StoryRescueCard
