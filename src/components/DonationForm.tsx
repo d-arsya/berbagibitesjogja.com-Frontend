@@ -5,6 +5,7 @@ import VisaLogo from 'public/svg/visa.svg';
 import MasterCardLogo from 'public/svg/mastercard.svg';
 import GopayLogo from 'public/svg/gopay.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Define the type for form data
 interface DonationFormData {
@@ -64,14 +65,14 @@ const DonationForm: React.FC = () => {
         <h1 className='text-2xl font-bold mb-4'>Jenis Donasi</h1>
         <div className='flex space-x-4 mb-6'>
           <button
-            className={`flex-1 py-2 rounded ${donationType === 'dana' ? 'bg-teal-500 text-white' : 'bg-gray-200'
+            className={`flex-1 py-2 rounded ${donationType === 'dana' ? 'bg-navy text-white' : 'bg-gray-200'
               }`}
             onClick={() => setDonationType('dana')}
           >
             Dana
           </button>
           <button
-            className={`flex-1 py-2 rounded ${donationType === 'makanan' ? 'bg-teal-500 text-white' : 'bg-gray-200'
+            className={`flex-1 py-2 rounded ${donationType === 'makanan' ? 'bg-navy text-white' : 'bg-gray-200'
               }`}
             onClick={() => setDonationType('makanan')}
           >
@@ -81,9 +82,9 @@ const DonationForm: React.FC = () => {
 
         {donationType === 'makanan' && (
           <form className='space-y-4' onSubmit={handleSubmit}>
-            <div className='bg-teal-50 p-4 rounded border border-teal-200'>
-              <p className='text-teal-700 font-medium'>Pastikan makanan yang didonasikan:</p>
-              <ul className='list-disc list-inside text-teal-700 text-sm'>
+            <div className='bg-navy-light p-4 rounded border border-navy'>
+              <p className='text-navy font-medium'>Pastikan makanan yang didonasikan:</p>
+              <ul className='list-disc list-inside text-navy text-sm'>
                 <li>Masih layak konsumsi</li>
                 <li>Belum melewati tanggal kedaluwarsa</li>
                 <li>Dalam kemasan yang baik</li>
@@ -201,12 +202,17 @@ const DonationForm: React.FC = () => {
               ></textarea>
             </div>
 
-            <button
-              type='submit'
-              className='w-full bg-teal-500 text-white py-2 rounded font-medium'
+            <Link href={'https://app.berbagibitesjogja.com/kontribusi/food-surplus'}
+              className='w-full bg-navy text-white p-2 rounded font-medium block text-center'
             >
               Ajukan Donasi Makanan
-            </button>
+            </Link>
+            {/* <button
+              type='submit'
+              className='w-full bg-navy text-white py-2 rounded font-medium'
+            >
+              Ajukan Donasi Makanan
+            </button> */}
           </form>
         )}
 
@@ -217,21 +223,21 @@ const DonationForm: React.FC = () => {
               <div className='flex space-x-4'>
                 <button
                   type='button'
-                  className='bg-teal-100 text-teal-700 px-4 py-2 rounded flex-1'
+                  className='bg-navy-light text-navy px-4 py-2 rounded flex-1'
                   onClick={() => setFormData((prev) => ({ ...prev, jumlahDonasi: 50000 }))}
                 >
                   Rp 50.000
                 </button>
                 <button
                   type='button'
-                  className='bg-teal-100 text-teal-700 px-4 py-2 rounded flex-1'
+                  className='bg-navy-light text-navy px-4 py-2 rounded flex-1'
                   onClick={() => setFormData((prev) => ({ ...prev, jumlahDonasi: 100000 }))}
                 >
                   Rp 100.000
                 </button>
                 <button
                   type='button'
-                  className='bg-teal-100 text-teal-700 px-4 py-2 rounded flex-1'
+                  className='bg-navy-light text-navy px-4 py-2 rounded flex-1'
                   onClick={() => setFormData((prev) => ({ ...prev, jumlahDonasi: 200000 }))}
                 >
                   Rp 200.000
@@ -294,44 +300,49 @@ const DonationForm: React.FC = () => {
               ></textarea>
             </div>
 
-            <button
-              type='submit'
-              className='w-full bg-teal-500 text-white py-2 rounded font-medium'
+            <Link href={'https://wa.me/628986950700'}
+              className='w-full bg-navy text-white py-2 rounded font-medium block text-center'
             >
               Donasi Sekarang
-            </button>
+            </Link>
+            {/* <button
+              type='submit'
+              className='w-full bg-navy text-white py-2 rounded font-medium'
+            >
+              Donasi Sekarang
+            </button> */}
           </form>
         )}
       </div>
 
-        
+
       {/* Right Section: Impact */}
 
 
       {donationType === 'makanan' && (
-        <div className='flex-1 bg-teal-900 text-white p-6 rounded-lg shadow-md max-w-lg w-full'>
+        <div className='flex-1 bg-tosca text-white p-6 rounded-lg shadow-md max-w-lg w-full'>
           <h2 className='text-xl font-bold mb-4'>Dampak Donasi Anda</h2>
           <ul className='space-y-4'>
             <li>
-              <div className='bg-teal-800 p-4 rounded-lg'>
+              <div className='bg-tosca-light p-4 rounded-lg'>
                 <p className='font-bold text-lg'>1.2 Juta+ Porsi</p>
                 <p className='text-sm'>Makanan telah diselamatkan</p>
               </div>
             </li>
             <li>
-              <div className='bg-teal-800 p-4 rounded-lg'>
+              <div className='bg-tosca-light p-4 rounded-lg'>
                 <p className='font-bold text-lg'>50.000+ Penerima</p>
                 <p className='text-sm'>Manfaat bantuan makanan</p>
               </div>
             </li>
             <li>
-              <div className='bg-teal-800 p-4 rounded-lg'>
+              <div className='bg-tosca-light p-4 rounded-lg'>
                 <p className='font-bold text-lg'>200+ Mitra</p>
                 <p className='text-sm'>Donatur makanan aktif</p>
               </div>
             </li>
           </ul>
-          <div className='mt-6 bg-teal-800 p-6 rounded-lg'>
+          <div className='mt-6 bg-tosca-light p-6 rounded-lg'>
             <p className='italic text-sm text-white'>
               &quot;Setiap donasi makanan yang Anda berikan tidak hanya menyelamatkan makanan dari pemborosan, tetapi juga memberikan harapan dan bantuan nyata bagi mereka yang membutuhkan.&quot;
             </p>
@@ -351,23 +362,23 @@ const DonationForm: React.FC = () => {
       )}
 
       {donationType === 'dana' && (
-        <div className='flex-1 bg-teal-900 text-white p-6 rounded-lg shadow-md max-w-lg w-full'>
+        <div className='flex-1 bg-tosca text-white p-6 rounded-lg shadow-md max-w-lg w-full'>
           <h2 className='text-xl font-bold mb-4'>Donasi Anda Berdampak</h2>
           <ul className='space-y-4'>
             <li>
-              <div className='bg-teal-800 p-4 rounded-lg'>
+              <div className='bg-tosca-light p-4 rounded-lg'>
                 <p className='font-bold text-lg'>Rp 50.000</p>
                 <p className='text-sm'>Membantu menyelamatkan dan mendistribusikan 10 porsi makanan</p>
               </div>
             </li>
             <li>
-              <div className='bg-teal-800 p-4 rounded-lg'>
+              <div className='bg-tosca-light p-4 rounded-lg'>
                 <p className='font-bold text-lg'>Rp 100.000</p>
                 <p className='text-sm'>Mendukung biaya transportasi untuk satu rute pengambilan makanan</p>
               </div>
             </li>
             <li>
-              <div className='bg-teal-800 p-4 rounded-lg'>
+              <div className='bg-tosca-light p-4 rounded-lg'>
                 <p className='font-bold text-lg'>Rp 200.000</p>
                 <p className='text-sm'>
                   Membiayai peralatan penyimpanan makanan yang aman dan bebas kontaminan
@@ -376,13 +387,13 @@ const DonationForm: React.FC = () => {
             </li>
           </ul>
           <div className='grid grid-cols-2 gap-4 mt-6'>
-            <div className='bg-teal-800 p-4 rounded-lg'>
-              <p className='font-bold text-lg'>Total Makanan Terselamatkan</p>
-              <p className='text-2xl'>12,450 kg</p>
+            <div className='bg-tosca-light p-4 rounded-lg'>
+              <p className='font-semibold text-md md:text-lg'>Total Makanan Terselamatkan</p>
+              <p className='text-lg font-bold md:text-2xl mt-2'>12,450 kg</p>
             </div>
-            <div className='bg-teal-800 p-4 rounded-lg'>
-              <p className='font-bold text-lg'>Penerima Manfaat</p>
-              <p className='text-2xl'>5,230 orang</p>
+            <div className='bg-tosca-light p-4 rounded-lg'>
+              <p className='font-semibold text-md md:text-lg'>Penerima Manfaat</p>
+              <p className='text-lg font-bold md:text-2xl mt-2'>5,230 orang</p>
             </div>
           </div>
           <div className='mt-6'>

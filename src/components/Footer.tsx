@@ -44,13 +44,13 @@ export function Footer() {
                 <div>
                     <p className='font-bold text-xl'>Terlibat</p>
                     <nav className='flex flex-col gap-y-2 mt-4'>
-                        <Link href="https://wa.me/628986950700">
+                        <Link href="/donasi">
                             Donasi
                         </Link>
-                        <Link href="https://wa.me/628986950700">
+                        <Link href="/gabung/relawan">
                             Menjadi Relawan
                         </Link>
-                        <Link href="https://wa.me/628986950700">
+                        <Link href="/gabung/mitra">
                             Menjadi Mitra
                         </Link>
                         {/* <Link href="/">
