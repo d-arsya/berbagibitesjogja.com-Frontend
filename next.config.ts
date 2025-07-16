@@ -2,7 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['news-api.berbagibitesjogja.com'],
+    remotePatterns: [
+    {
+      protocol: 'https',
+      hostname: 'news-api.berbagibitesjogja.com',
+      pathname: '**',
+    },
+    ],
   },
 };
 

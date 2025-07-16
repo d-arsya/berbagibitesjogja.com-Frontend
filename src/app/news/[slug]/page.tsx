@@ -40,7 +40,7 @@ export async function generateMetadata(
 function formatDate(date: string): string {
     const dateString = new Date(date);
 
-    const formatted = dateString.toLocaleDateString("en-US", {
+    const formatted = dateString.toLocaleDateString("id-ID", {
         month: "short", // "Jun"
         day: "numeric", // "1"
         year: "numeric", // "2025"

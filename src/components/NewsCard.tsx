@@ -15,9 +15,15 @@ interface ProgramAttribute {
 }
 function formatDate(date: string): string {
     const d = new Date(date);
-    // format manual supaya tidak tergantung locale
-    return `${d.getUTCDate()} ${["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+    const day = d.getUTCDate().toString().padStart(2, '0');
+    const month = [
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ][d.getUTCMonth()];
+    const year = d.getUTCFullYear();
+    return `${day} ${month} ${year}`;
 }
+
 
 export default function NewsCard(props: ProgramAttribute) {
     const { image, alt_image, title, slug, excerpt, date } = props;
