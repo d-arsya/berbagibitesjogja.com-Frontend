@@ -3,6 +3,7 @@ import type { NextRequest } from "next/server";
 import { isGuestRoute, isProtectedRoute } from "./lib/route";
 
 export function middleware(request: NextRequest) {
+  return NextResponse.next();
   const token = request.cookies.get("token");
   const pathname = request.nextUrl.pathname;
 
@@ -18,6 +19,4 @@ export function middleware(request: NextRequest) {
       `${process.env.BACKEND_URL}/auth/google?redirect=${redirectUrl}`
     );
   }
-
-  return NextResponse.next();
 }
