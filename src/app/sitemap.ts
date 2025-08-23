@@ -1,10 +1,10 @@
 import type { MetadataRoute } from "next";
-interface Sitemap {
-  url: string;
-  lastModified: Date;
-  changeFrequency: "weekly" | "monthly";
-  priority: number;
-}
+// interface Sitemap {
+//   url: string;
+//   lastModified: Date;
+//   changeFrequency: "weekly" | "monthly";
+//   priority: number;
+// }
 
 // async function getNews(): Promise<Sitemap[]> {
 //   const response = await fetch(

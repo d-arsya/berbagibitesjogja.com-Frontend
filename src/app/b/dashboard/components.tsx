@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/chart";
 
 import { useMemo } from "react";
+import Image from "next/image";
 
 type ActivityItemProps = {
   title: string;
@@ -100,7 +101,7 @@ export function HeroCard({ name, title, desc, Photo }: HeroCardProps) {
   return (
     <div className="p-6 rounded-2xl bg-navy-light flex flex-col items-center">
       {typeof Photo === "string" ? (
-        <img
+        <Image
           src={Photo}
           alt={name}
           className="w-16 h-16 rounded-full object-cover mb-3"
