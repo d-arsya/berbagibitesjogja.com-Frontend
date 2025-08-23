@@ -65,7 +65,7 @@ const data = {
     },
     {
       name: "Pengaturan",
-      url: "/b/pengeturan",
+      url: "/b/pengaturan",
       icon: IoMdSettings,
     },
   ],
