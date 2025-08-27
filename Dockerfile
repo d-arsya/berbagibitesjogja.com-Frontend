@@ -2,11 +2,11 @@
 FROM node:22-alpine AS builder
 WORKDIR /app
 
-# Copy package files and install dependencies
-COPY package.json package-lock.json ./
+# Install dependencies with cache optimization
+COPY package*.json ./
 RUN npm ci
 
-# Copy source code and build
+# Copy source and build Next.js
 COPY . .
 RUN npm run build
 
@@ -15,15 +15,20 @@ FROM node:22-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
-# Copy only the build output and necessary files
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/next.config.ts ./next.config.ts
+# Create non-root user
+RUN addgroup -g 1001 -S nodejs \
+    && adduser -S nextjs -u 1001 -G nodejs
 
-# Expose port
+# Copy only standalone output (super small image)
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+
+# Set permission
+RUN chown -R nextjs:nodejs /app
+USER nextjs
+
 EXPOSE 3000
 
-# Run the app
-CMD ["npm", "start"]
+# Run Next.js in standalone mode
+CMD ["node", "server.js"]
