@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 
 export default function Page() {
-  redirect("https://bbj.disyfa.cloud/form"); // redirect ke halaman /target
+  redirect(`${process.env.APP_URL}/form`); // redirect ke halaman /target
   return null;
 }
