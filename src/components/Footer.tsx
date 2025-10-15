@@ -50,8 +50,8 @@ export function Footer() {
             {/* <Link href="/">
                             Acara Mendatang
                         </Link> */}
-            <Link href={process.env.APP_URL + "/login"}>Login Relawan</Link>
-            <Link href={process.env.APP_URL + "/form"}>Form Pendaftaran</Link>
+            <Link href={"/login"}>Login Relawan</Link>
+            <Link href={"/form"}>Form Pendaftaran</Link>
           </nav>
         </div>
         <div className="md:max-w-1/4">
