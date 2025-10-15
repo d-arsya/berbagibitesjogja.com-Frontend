@@ -137,6 +137,11 @@
   }
 }
 
+/* * {
+  border: 1px solid red;
+} */
+/* Utk debugging */
+
 html {
   scroll-behavior: smooth;
 }
@@ -376,4 +381,16 @@ html {
 .embla__slide {
   flex: 0 0 25%;
   min-width: 0;
+}
+
+/* AOS fix */
+[data-aos] {
+  pointer-events: none;
+}
+.aos-animate {
+  pointer-events: auto;
+}
+
+*:has(> [data-aos]) {
+  overflow-x: hidden;
 }
