@@ -65,7 +65,8 @@ export function Footer() {
               <span className="w-full">
                 Pusat Studi Pancasila UGM
                 <br />
-                Jl. Podocarpus II D-22, Kampus UGM, Bulaksumur, Yogyakarta 55281
+                Jl. Podocarpus II D-22, Universitas Gadjah Mada, Bulaksumur,
+                Yogyakarta 55281
               </span>
             </Link>
             <Link className="flex" href="https://wa.me/628986950700">
