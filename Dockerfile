@@ -2,12 +2,23 @@
 FROM node:22-alpine AS builder
 WORKDIR /app
 
+ARG BACKEND_URL
+ARG APP_URL
+
+# Set them as environment variables
+ENV BACKEND_URL=$BACKEND_URL
+ENV APP_URL=$APP_URL
+
 # Install dependencies with cache optimization
 COPY package*.json ./
 RUN npm ci
 
 # Copy source and build Next.js
 COPY . .
+
+RUN echo "BACKEND_URL=$BACKEND_URL" >> .env.production.local && \
+    echo "APP_URL=$APP_URL" >> .env.production.local
+
 RUN npm run build
 
 # 2. Production stage
