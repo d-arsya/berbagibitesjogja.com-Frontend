@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { isProtectedRoute } from "@/lib/route";
 import { Header } from "./Header";
 import SidebarLayout from "./SidebarLayout";
+import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Inter({
   variable: "--font-inter-sans",
@@ -18,6 +19,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
       <body className={`${geistSans.variable} antialiased`}>
+        <NextTopLoader showSpinner={false} color="#009ca6" height={3} />
         {isProtected ? (
           <>
             <SidebarLayout>{children}</SidebarLayout>
