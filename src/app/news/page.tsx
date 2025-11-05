@@ -4,6 +4,7 @@ import NewsCard from "@/components/NewsCard";
 import IconTangan from "public/svg/hand-love.svg";
 import IconJabat from "public/svg/hand-shake.svg";
 import IconGotong from "public/svg/work-together.svg";
+import { CarouselTry } from "@/components/NewsCarousel";
 
 interface PostAttribute {
   id: number;
@@ -17,12 +18,19 @@ interface PostAttribute {
   excerpt: string;
   slug: string;
   date: string;
+  authorName: string;
+  authorImage: string;
 }
 
 interface WPImageSize {
   source_url: string;
   width: number;
   height: number;
+}
+
+interface WPAuthor {
+  display_name: string;
+  avatar_url: string;
 }
 
 interface WPPost {
@@ -35,10 +43,11 @@ interface WPPost {
     "wp:featuredmedia"?: {
       alt_text: string;
       media_details: {
-        sizes: Record<string, WPImageSize | undefined>; // ✅ FIX HERE
+        sizes: Record<string, WPImageSize | undefined>;
       };
     }[];
   };
+  authors: WPAuthor[];
 }
 
 interface NewsItem {
@@ -53,6 +62,8 @@ interface NewsItem {
   excerpt: string;
   slug: string;
   date: string;
+  authorName: string;
+  authorImage: string;
 }
 
 export default async function Page() {
@@ -71,15 +82,27 @@ export default async function Page() {
       excerpt: post.excerpt.rendered,
       slug: post.slug,
       date: post.date,
+      authorName: post.authors?.[0]?.display_name || "",
+      authorImage: post.authors?.[0]?.avatar_url || "",
     };
   });
 
   return (
     <>
+      <CarouselTry
+        image={news[0].image}
+        alt_image={news[0].alt_image}
+        title={news[0].title}
+        excerpt={news[0].excerpt}
+        slug={news[0].slug}
+        date={news[0].date}
+        authorName={news[0].authorName}
+        authorImage={news[0].authorImage}
+      />
       <h1 className="text-3xl font-bold text-center text-navy">
         Artikel Terbaru
       </h1>
-      <div className="flex flex-col md:flex-row justify-center flex-wrap gap-y-12 py-20">
+      <div className="flex flex-col md:flex-row justify-center flex-wrap gap-y-12 pb-20 pt-5">
         {news.map((post: PostAttribute) => (
           <NewsCard
             key={post.id}
@@ -89,6 +112,8 @@ export default async function Page() {
             excerpt={post.excerpt}
             slug={post.slug}
             date={post.date}
+            authorName={post.authorName}
+            authorImage={post.authorImage}
           />
         ))}
       </div>
