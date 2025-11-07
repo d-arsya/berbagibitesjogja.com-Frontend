@@ -4,6 +4,8 @@ import NewsCard from "@/components/NewsCard";
 import IconTangan from "public/svg/hand-love.svg";
 import IconJabat from "public/svg/hand-shake.svg";
 import IconGotong from "public/svg/work-together.svg";
+import { CarouselTry } from "@/components/NewsCarousel";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 interface PostAttribute {
   id: number;
@@ -17,12 +19,19 @@ interface PostAttribute {
   excerpt: string;
   slug: string;
   date: string;
+  authorName: string;
+  authorImage: string;
 }
 
 interface WPImageSize {
   source_url: string;
   width: number;
   height: number;
+}
+
+interface WPAuthor {
+  display_name: string;
+  avatar_url: string;
 }
 
 interface WPPost {
@@ -35,10 +44,11 @@ interface WPPost {
     "wp:featuredmedia"?: {
       alt_text: string;
       media_details: {
-        sizes: Record<string, WPImageSize | undefined>; // ✅ FIX HERE
+        sizes: Record<string, WPImageSize | undefined>;
       };
     }[];
   };
+  authors: WPAuthor[];
 }
 
 interface NewsItem {
@@ -53,14 +63,48 @@ interface NewsItem {
   excerpt: string;
   slug: string;
   date: string;
+  authorName: string;
+  authorImage: string;
 }
 
-export default async function Page() {
-  const response = await fetch(
-    "https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_embed",
+interface PageProps {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function Page({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const currentPage = Number(params.page) || 1;
+  const perPage = 9;
+
+  const carouselResponse = await fetch(
+    `https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_embed&per_page=5`,
     { cache: "no-store" }
   );
+  const rawCarouselNews = await carouselResponse.json();
+
+  const carouselArticles = rawCarouselNews.map((post: WPPost): NewsItem => {
+    const featured = post._embedded?.["wp:featuredmedia"]?.[0];
+    return {
+      id: post.id,
+      image: featured?.media_details?.sizes?.full,
+      alt_image: featured?.alt_text || post.title.rendered,
+      title: post.title.rendered,
+      excerpt: post.excerpt.rendered,
+      slug: post.slug,
+      date: post.date,
+      authorName: post.authors?.[0]?.display_name || "",
+      authorImage: post.authors?.[0]?.avatar_url || "",
+    };
+  });
+
+  const response = await fetch(
+    `https://news-api.berbagibitesjogja.com/wp-json/wp/v2/posts?_embed&page=${currentPage}&per_page=${perPage}`,
+    { cache: "no-store" }
+  );
+
+  const totalPages = Number(response.headers.get("X-WP-TotalPages")) || 1;
   const rawNews = await response.json();
+
   const news = rawNews.map((post: WPPost): NewsItem => {
     const featured = post._embedded?.["wp:featuredmedia"]?.[0];
     return {
@@ -71,15 +115,20 @@ export default async function Page() {
       excerpt: post.excerpt.rendered,
       slug: post.slug,
       date: post.date,
+      authorName: post.authors?.[0]?.display_name || "",
+      authorImage: post.authors?.[0]?.avatar_url || "",
     };
   });
 
   return (
-    <>
-      <h1 className="text-3xl font-bold text-center text-navy">
+    <div>
+      {carouselArticles.length > 0 && (
+        <CarouselTry articles={carouselArticles} />
+      )}
+      <h1 className="text-3xl font-bold text-center text-navy pt-8">
         Artikel Terbaru
       </h1>
-      <div className="flex flex-col md:flex-row justify-center flex-wrap gap-y-12 py-20">
+      <div className="flex flex-col md:flex-row justify-center flex-wrap gap-y-12 pb-20 pt-5">
         {news.map((post: PostAttribute) => (
           <NewsCard
             key={post.id}
@@ -89,9 +138,54 @@ export default async function Page() {
             excerpt={post.excerpt}
             slug={post.slug}
             date={post.date}
+            authorName={post.authorName}
+            authorImage={post.authorImage}
           />
         ))}
       </div>
+
+      {totalPages > 1 && (
+        <div className="flex justify-center items-center gap-2 pb-12">
+          {currentPage > 1 ? (
+            <Link
+              href={`/news?page=${currentPage - 1}`}
+              className="px-4 py-2 text-navy"
+            >
+              <ChevronLeft />
+            </Link>
+          ) : (
+            <span className="px-4 py-2 text-navy/50">
+              <ChevronLeft />
+            </span>
+          )}
+
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+            <Link
+              key={page}
+              href={`/news?page=${page}`}
+              className={`px-4 py-2 font-semibold ${
+                page === currentPage ? "text-navy" : "text-navy/50"
+              }`}
+            >
+              {page}
+            </Link>
+          ))}
+
+          {currentPage < totalPages ? (
+            <Link
+              href={`/news?page=${currentPage + 1}`}
+              className="px-4 py-2 text-navy"
+            >
+              <ChevronRight />
+            </Link>
+          ) : (
+            <span className="px-4 py-2 text-navy/50">
+              <ChevronRight />
+            </span>
+          )}
+        </div>
+      )}
+
       <section className="-mx-2 md:-mx-32 bg-navy py-12 px-6 md:px-32">
         <div className="bg-tosca-light rounded-4xl p-6 md:p-12">
           <h1 className="text-white font-bold text-4xl text-center">
@@ -326,6 +420,6 @@ export default async function Page() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
