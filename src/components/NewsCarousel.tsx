@@ -75,7 +75,7 @@ export function CarouselTry({ articles }: CarouselProps) {
           {articles.map((article, index) => (
             <CarouselItem key={article.id || index} className="pl-4">
               <Link href={`/news/${article.slug}`} className="block">
-                <div className="relative w-full aspect-[21/9] rounded-lg overflow-hidden">
+                <div className="relative w-full md:aspect-[21/9] aspect-[9/12] rounded-lg overflow-hidden">
                   <Image
                     src={article.image.source_url}
                     alt={article.alt_image}
