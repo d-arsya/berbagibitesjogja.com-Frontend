@@ -73,7 +73,7 @@ export default async function Page({
       </h1>
       <div className="flex flex-row items-center justify-items-start mt-8 md:hidden">
         <Image
-          className="rounded-full mr-2"
+          className="rounded-full mr-2 "
           src={post.authors?.[0]?.avatar_url || ""}
           alt={post.authors?.[0]?.display_name || ""}
           width={46}
@@ -89,13 +89,15 @@ export default async function Page({
           </p>
         </div>
       </div>
-      <Image
-        src={post.yoast_head_json.og_image[0].url}
-        alt={post.title.rendered}
-        width={post.yoast_head_json.og_image[0].width}
-        height={post.yoast_head_json.og_image[0].height}
-        className="w-full h-auto rounded-lg my-8"
-      />
+      <div className="px-12">
+        <Image
+          src={post.yoast_head_json.og_image[0].url}
+          alt={post.title.rendered}
+          width={post.yoast_head_json.og_image[0].width}
+          height={post.yoast_head_json.og_image[0].height}
+          className="w-full h-auto rounded-lg my-8"
+        />
+      </div>
 
       {/* Konten */}
       <div className="px-6 md:px-12 pt-0 pb-6 flex flex-col md:flex-row">
@@ -112,7 +114,7 @@ export default async function Page({
         />
       </div>
 
-      <div className="px-6 md:px-12 pt-12 pb-6 hidden md:block">
+      <div className="px-6 md:px-12 pt-12 pb-12 hidden md:block">
         <h2 className="text-navy text-2xl font-semibold mb-4">
           Artikel Lainnya
         </h2>
