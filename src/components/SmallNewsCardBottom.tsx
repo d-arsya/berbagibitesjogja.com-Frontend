@@ -16,6 +16,7 @@ interface ProgramAttribute {
   date: string;
   authorName: string;
   authorImage: string;
+  orientation?: "horizontal" | "vertical";
 }
 function formatDate(date: string): string {
   const d = new Date(date);
@@ -38,31 +39,31 @@ function formatDate(date: string): string {
   return `${day} ${month} ${year}`;
 }
 
-export default function NewsCard(props: ProgramAttribute) {
+export default function SmolNewsCard(props: ProgramAttribute) {
   const { image, alt_image, title, slug, date, authorName, authorImage } =
     props;
 
   return (
     <Link
       href={`/news/${slug}`}
-      className="w-full md:w-1/3 p-2 md:p-6 rounded-md  flex flex-col"
+      className="w-full md:w-1/3 p-2 rounded-md flex flex-col"
     >
       <Image
         className="rounded-xl w-full aspect-[4/3] object-cover"
         src={image.source_url}
         alt={alt_image}
-        width={400}
-        height={300}
+        width={image.width}
+        height={image.height}
       />
-      <h1 className="text-gray-600 font-semibold mt-4">{formatDate(date)}</h1>
-      <h1 className="text-navy font-semibold text-3xl my-2">{title}</h1>
-      <p className="leading-8 mt-2 text-gray-500 mb-2">
+      <h1 className="text-gray-600 font-sm mt-2">{formatDate(date)}</h1>
+      <h1 className="text-navy font-semibold text-xl my-2">{title}</h1>
+      <p className="text-sm leading-4 font-medium mt-2 mb-2 text-gray-500">
         {props.excerpt
           .replace(/<[^>]*>?/gm, "")
           .replace("[&hellip;]", "")
           .trim()
           .split(" ")
-          .slice(0, 35)
+          .slice(0, 15)
           .join(" ") + " ..."}
       </p>
       <div className="flex flex-row items-center justify-items-start mt-auto">
@@ -70,8 +71,8 @@ export default function NewsCard(props: ProgramAttribute) {
           className="rounded-full mr-2"
           src={authorImage}
           alt={authorName}
-          width={46}
-          height={46}
+          width={32}
+          height={32}
         />
         <p className="text-sm font-medium text-gray-500">{authorName}</p>
       </div>

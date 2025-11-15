@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "news-api.berbagibitesjogja.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "secure.gravatar.com",
+        pathname: "**",
+      },
     ],
   },
   output: "standalone",
