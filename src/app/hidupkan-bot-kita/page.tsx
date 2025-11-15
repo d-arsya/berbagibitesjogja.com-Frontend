@@ -2229,7 +2229,7 @@ function getRandomWords(count = 3) {
   // Step 3 & 4: join words and join lines
   return chunked.map((line) => line.join(" ")).join("\n\n");
 }
-
+export const dynamic = "force-dynamic";
 export default function Page() {
   const phoneNumber = "6285117773642"; // change to target number
   const randomText = encodeURIComponent(getRandomWords(300));
